@@ -1,4 +1,9 @@
-hint "Started !";
+/*////////////////////////////////////////////////
+                                author : GreeFine
+                        Code written by GreeFine
+        Using this code or mission without GreeFine direct permission is forbidden
+                        Script Description : Lock in Fps for Gun Fight.
+///////////////////////////////////////////////*/
 FpsLockActive = false;
 Timer = 0;
 
