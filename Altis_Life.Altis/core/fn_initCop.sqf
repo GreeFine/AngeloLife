@@ -2,7 +2,7 @@
 /*
 	File: fn_initCop.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Cop Initialization file.
 */
@@ -22,6 +22,7 @@ if(!(str(player) in ["cop_1111"])) then {
 		uiSleep 35;
 	};
 };
+
 player setVariable["rank",(__GETC__(life_coplevel)),true];
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
@@ -30,7 +31,7 @@ waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done
 //Introcam
 [] spawn life_fnc_IntroCam;
 
-//Skins und Backpacks für Cops
+//Skins und Backpacks f?r Cops
 // CopLevel 1
 [] spawn
 {

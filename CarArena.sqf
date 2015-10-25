@@ -32,6 +32,39 @@ Arena_buyVeh = {
 
 };
 
+CreateBuyPlatforme = {
+_StartingPos = [30689.2,38.0166,0];
+_SizeW = 15;
+_SizeH = 41.7;
+_hight = 350;
+_Rows = 30;
+_lines = 150;
+
+ArenaPlateformRows = [];
+ArenaPlateformLines = ["Land_Pier_F" createVehicle _StartingPos];
+(ArenaPlateformLines select 0) setPosATL [_StartingPos select 0,_StartingPos select 1,_hight];
+
+for "_i" from 1 to _lines do
+{
+	ArenaPlateformLines = ArenaPlateformLines + ["Land_Pier_F" createVehicle [0,0,0]];
+	_PlateformBuffer = (ArenaPlateformLines select _i);
+	_PlateformBuffer attachTo [ArenaPlateformLines select (_i - 1),[_SizeH,0,0]];
+	detach _PlateformBuffer;
+	ArenaPlateformRows = ArenaPlateformRows + [_PlateformBuffer];
+	_offset = (count ArenaPlateformRows)-1;
+	for "_j" from 1 to _Rows do
+	{
+		ArenaPlateformRows = ArenaPlateformRows + ["Land_Pier_F" createVehicle [0,0,0]];
+		_PlatformBuffer = ArenaPlateformRows select _j + _offset;
+		_PlatformBuffer attachTo [ArenaPlateformRows select (_j + _offset - 1),[0,_SizeW,0]];
+		detach _PlatformBuffer;
+	};
+};
+};
+
+/*
+{ deleteVehicle _x} forEach (ArenaPlateformRows + ArenaPlateformLines);
+*/
 Arena_Check = {
 	_arena = markerPos ""; //Marker of the arena
 	_arenaSize = 1000; //size in meter of the arena
@@ -56,3 +89,4 @@ Arena_ActionHandler = {
 		};
 	};
 };
+

@@ -1,7 +1,7 @@
 /*
 	File: fn_clothing_reb.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for Reb shop.
 */
@@ -31,7 +31,7 @@ switch (_filter) do
 			["U_B_CTRG_1",nil,50000]
 		];
 	};
-	
+
 	//Hats
 	case 1:
 	{
@@ -46,7 +46,7 @@ switch (_filter) do
 			["H_CrewHelmetHeli_O",nil,10000]
 		];
 	};
-	
+
 	//Glasses
 	case 2:
 	{
@@ -62,7 +62,7 @@ switch (_filter) do
 			["G_Combat",nil,55]
 		];
 	};
-	
+
 	//Vest
 	case 3:
 	{
@@ -76,7 +76,7 @@ switch (_filter) do
 			["V_PlateCarrierH_CTRG",nil,25000]
 		];
 	};
-	
+
 	//Backpacks
 	case 4:
 	{

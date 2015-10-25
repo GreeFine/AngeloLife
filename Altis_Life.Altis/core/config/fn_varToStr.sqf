@@ -1,7 +1,7 @@
 ﻿/*
 	File: fn_varToStr.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Takes the long-name (variable) and returns a display name for our
 	virtual item.
@@ -64,10 +64,10 @@ switch (_var) do
 	case "life_inv_battery": {"Batterie de téléphone"};
 	case "life_inv_blastingcharge": {"Charge de C4"};
 	case "life_inv_boltcutter": {"Outils de serrurier"};
-	case "life_inv_defusekit": {"C4 EntschärfungsKit"};
+	case "life_inv_defusekit": {"Outil de désamorçage C4"};
 	case "life_inv_painkillers": {"Analgésique"};
 	case "life_inv_morphium": {"Morphine"};
-	case "life_inv_zipties": {"Collier de serrage"};
+	case "life_inv_zipties": {"Menottes"};
 	case "life_inv_storagesmall": {"Petite caisse de stockage"};
 	case "life_inv_storagebig": {"Caisse de stockage"};
 	case "life_inv_mauer": {"Barrage"};
@@ -83,16 +83,16 @@ switch (_var) do
 	case "life_inv_bottledbeer": {"Bière en bouteille"};
 	case "life_inv_bottledshine": {"Moonshine en bouteille"};
 	case "life_inv_moonshine": {"Moonshine"};
-	case "life_inv_puranium": {"Mélange d'uranium"}; // Add This
-    case "life_inv_ipuranium": {"Produit d'uranium III"}; // Add This
-    case "life_inv_uranium1": {"Uranium"}; // Add This
-    case "life_inv_uranium2": {"Uranium brut"}; // Add This
+	case "life_inv_puranium": {"Produit purification"}; // Add This
+    case "life_inv_ipuranium": {"Produit purification Premium"}; // Add This
+    case "life_inv_uranium1": {"Minerais Uranium"}; // Add This
+    case "life_inv_uranium2": {"Minerais Uranium nettoyer"}; // Add This
     case "life_inv_uranium3": {"Uranium purifié"}; // Add This
-    case "life_inv_uranium4": {"Concentré d'uranium"}; // Add This
-    case "life_inv_uranium": {"Uranium"}; // Add This
-	case "life_inv_kidney": {"Rein"}; 
+    case "life_inv_uranium4": {"Uranium concentré"}; // Add This
+    case "life_inv_uranium": {"Uranium en Bar"}; // Add This
+	case "life_inv_kidney": {"Rein"};
 	case "life_inv_scalpel": {"Scalpel"};
-	
+
 	//License Block
 	case "license_civ_driver": {"Permis de conduire"};
 	case "license_civ_air": {"Permis de pilotage"};
