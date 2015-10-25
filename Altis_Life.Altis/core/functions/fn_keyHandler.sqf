@@ -498,5 +498,23 @@ switch (_code) do
 		closeDialog 0;
 		_handled = false;
 	};
+	
+	
+	case 67:
+    {
+        if(!_shift) then
+        {
+           if (soundVolume != 1) then 
+           {
+	            1 fadeSound 1;
+	            titleText ["Vous avez enlevé vos boules quiès.", "PLAIN"];
+           }
+        else
+           {
+	           1 fadeSound 0.1;
+	           titleText ["Vous avez mis vos boules quiès.", "PLAIN"];
+           };
+        };
+    };
 };
 _handled;

@@ -18,12 +18,12 @@ switch (_filter) do
 	case 0:
 	{
 		[
-		["U_C_Poloshirt_blue","Polo bleu",250],
-		["U_C_Poloshirt_burgundy","Polo violet",275],
+		["U_C_Poloshirt_blue","Polo Petit Batman",250],
+		["U_C_Poloshirt_burgundy","Jack daniels",275],
 		["U_C_Poloshirt_redwhite","Polo rouge/blanc",150],
 		["U_C_Poloshirt_salmon","Polo Saumon",175],
-		["U_C_Poloshirt_stripped","Polo noir/bleu",125],
-		["U_C_Poloshirt_tricolour","Polo Tricolor",350],
+		["U_C_Poloshirt_stripped","Nike",125],
+		["U_C_Poloshirt_tricolour","Polo Swag",350],
 		["U_C_Poor_2","Clochar",250],
 		["U_IG_Guerilla2_2","Chemise vert",650],
 		["U_IG_Guerilla3_1","Veste marron",735],

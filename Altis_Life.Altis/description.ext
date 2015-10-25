@@ -1,6 +1,6 @@
-author = "Tonic | Edit by SealDrop";
-onLoadName = "٠٠•● S E A L D R O P ●•٠";
-onLoadMission = "AltisLife 3.1.4.8 | SealDrop ScriptPack";
+author = "Tonic | Lentini Life";
+onLoadName = "٠٠•● Lentini Life ●•٠";
+onLoadMission = "AltisLife 3.1.4.8 | Lentini Life";
 wreckManagerMode = 1;
 wreckLimit = 0;
 wreckRemovalMinTime = 60;

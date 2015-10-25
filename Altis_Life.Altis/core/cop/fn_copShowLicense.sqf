@@ -1,4 +1,4 @@
-﻿/*
+/*
 File : fn_copShowLicense.sqf
 Create : Black Lagoon
 Edit : Deathblade
@@ -23,16 +23,26 @@ _coplevel = call life_coplevel;
 
 switch ( _coplevel ) do
 {
-	case 1: { _rang = "Rang 1"; };
-	case 2: { _rang = "Rang 2"; };
-	case 3: { _rang = "Rang 3"; };
-	case 4: { _rang = "Rang 4"; };
-	case 5: { _rang = "Rang 5"; };
-	case 6: { _rang = "Rang 6"; };
-	case 7: { _rang = "Rang 7"; };
+	case 1: { _rang = "Recrue"; };
+	case 2: { _rang = "Gendarme"; };
+	case 3: { _rang = "Adjudant"; };
+	case 4: { _rang = "Adjdant chef"; };
+	case 5: { _rang = "Major"; };
+	case 6: { _rang = "Sous-Lieutenant"; };
+	case 7: { _rang = "Lieutenant"; };
+	case 8: { _rang = "Capitaine"; };
+	case 9: { _rang = "Commandant"; };
+	case 10: { _rang = "Lieutenant-Colonel"; };
+	case 11: { _rang = "Colonel"; };
+	case 12: { _rang = "Soldat"; };
+	case 13: { _rang = "soldat 1er classe"; };
+	case 14: { _rang = "Caporal"; };
+	case 15: { _rang = "Caporal chef"; };
+	case 16: { _rang = "Sergent"; };
+	case 17: { _rang = "Sergent chef"; };
 	default {_rank =  "Erreur";};
 };
 
-_message = format["<img size='10' color='#FFFFFF' image='Textures\insigne.jpg'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.8'>%2</t><br/><t size='1'>Gendarme</t>", name player, _rang];
+_message = format["<img size='10' color='#FFFFFF' image='textures\insigne.paa'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.8'>%2</t><br/><t size='1'>Policier d'Altis</t>", name player, _rang];
 
 [[player, _message],"life_fnc_copLicenseShown",_target,false] spawn life_fnc_MP;

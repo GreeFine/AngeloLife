@@ -2,14 +2,14 @@ waitUntil {!isNull player && player == player};
 if(player diarySubjectExists "rules")exitwith{};
 
 player createDiarySubject ["changelog","Changelog"];
-player createDiarySubject ["serverrules","Server Regeln"];
-player createDiarySubject ["policerules","Polizei Gesetze"];
+player createDiarySubject ["serverrules","Regles serveur"];
+player createDiarySubject ["policerules","Regles Policiere"];
 player createDiarySubject ["safezones","SafeZones"];
-//player createDiarySubject ["civrules","Civilian Rules"];
+//player createDiarySubject ["civrules","Regles Civile"];
 player createDiarySubject ["illegalitems","Illegal"];
-//player createDiarySubject ["gangrules","Gang Rules"];
-//player createDiarySubject ["terrorrules","Terrorism Rules"];
-player createDiarySubject ["controls","Steuerung"];
+//player createDiarySubject ["gangrules","Regles des gang"];
+//player createDiarySubject ["terrorrules","Regles Rebelle"];
+player createDiarySubject ["controls","Touches"];
 
 /*  Example
 	player createDiaryRecord ["", //Container
@@ -338,8 +338,8 @@ player createDiarySubject ["controls","Steuerung"];
 		[
 			"Ressources illegales",
 				"
-				Die Folgenden Rohstoffe sind Illegal:<br/><br/>
-				1. Schildkröten<br/>
+				les matiére premiere illégaux:<br/><br/>
+				1. Tortue<br/>
 				2. Cocaine<br/>
 				3. Heroine<br/>
 				4. Cannabis<br/>
@@ -347,8 +347,8 @@ player createDiarySubject ["controls","Steuerung"];
 				6. Meth<br/>
 				7. Moonshine<br/>
 				8. Or<br/>
-				9. Uran III<br/>
-				10. Nieren<br/>
+				9. Uranium III<br/>
+				10. Rein<br/>
 				"
 		]
 	];
@@ -365,21 +365,21 @@ player createDiarySubject ["controls","Steuerung"];
 				F: Sirene gendarmerie<br/>
 				T: Coffre<br/>
 				M: Gendarmerie Avertissement<br/>
-				Ä: Cop Schranken öffnen<br/>
-				O: Cops Nagelbänder legen<br/>
-				^: Spitzhacke<br/>
-				Left Shift + 1: Telefon<br/>
-				Left Shift + 2: WantedList<br/>
-				Left Shift + 3: Anzeige erstatten<br/>
-				Left Shift + R: Festnehmen<br/>
-				Left Shift + G: Ergeben<br/>
-				Left Shift + V: Knockout<br/>
-				Left Shift + O: Civ Restrain<br/>
-				Left Shift + Space: Springen<br/>
-				Left Shift + H: Waffe Holstern<br/>
-				Left Windows: Housing option<br/>
-				Left Windows: Farmen an Feldern<br/>
-				Left Windows: Spieler Interaktionsmenü<br/>
+				Ä: Herse policier<br/>
+				O: herse policier<br/>
+				^: Pic<br/>
+				Left Shift + 1: Telephone<br/>
+				Left Shift + 2: Interpole<br/>
+				Left Shift + 3: Barréme de contravention<br/>
+				Left Shift + R: Menotte<br/>
+				Left Shift + G: main sur la téte<br/>
+				Left Shift + V: Assomer<br/>
+				Left Shift + O: civile residut<br/>
+				Left Shift + Space: Sauter<br/>
+				Left Shift + H: Ranger arme<br/>
+				Left Windows: option Logement<br/>
+				Left Windows: Recolter<br/>
+				Left Windows: intermenu<br/>
 				"
 		]
 	];

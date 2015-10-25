@@ -30,8 +30,35 @@ player addRating 9999999;
 while {true} do
     {
         waitUntil {uniform player == "U_C_Poloshirt_stripped"};
-        player setObjectTextureGlobal [0,"skins\tshirt.jpg"];
+        player setObjectTextureGlobal [0,"skins\Tshirtnike.paa"];
         waitUntil {uniform player != "U_C_Poloshirt_stripped"};
+    };
+};
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {uniform player == "U_C_Poloshirt_tricolour"};
+        player setObjectTextureGlobal [0,"skins\c_poloshirt_4_co.paa"];
+        waitUntil {uniform player != "U_C_Poloshirt_tricolour"};
+    };
+};
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {uniform player == "U_C_Poloshirt_burgundy"};
+        player setObjectTextureGlobal [0,"skins\c_poloshirt_2_co_jack_daniel.paa"];
+        waitUntil {uniform player != "U_C_Poloshirt_burgundy"};
+    };
+};
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {uniform player == "U_C_Poloshirt_blue"};
+        player setObjectTextureGlobal [0,"skins\c_poloshirt_1_co.paa"];
+        waitUntil {uniform player != "U_C_Poloshirt_blue"};
     };
 };
 

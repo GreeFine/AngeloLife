@@ -21,40 +21,40 @@ switch (playerSide) do
 	case west: 
 	{
         _text = [
-			format ["<t align='left'><t color='#ff1111'>Bitte halte dich auf unserem Server ans RolePlay, betrachte dies als deine erste und letzte Warnung!</t>"],
-			format ["<t align='left'>Wenn das dein erster Besuch auf unserem Server ist, bitten wir dich, die Regeln genauestens durchzulesen. Dies kannst Du in unserem Forum: SealDrop.de tun.</t>"],
-			format ["<t align='left'>Solltest du dich nun fragen welcher Rohstoff dir am schnellsten und meisten Geld bringt, drücke <t color='#FF8000'>Z</t> und klicke auf Börse. Die Börse hat immer die aktuellsten Informationen zu den Rohstoffpreisen für dich, da wir in einer dynamischen Wirtschaft leben werden die Preise sich auch immer ändern im Verhältniss zu der Menge an Rohstoffen die gerade verfügbar sind.</t>"],
-			format ["<t align='left'>Desyncs: Die meisten Desyncs sind durch die Clients bedingt, bei einer Framerate unter 30 FPS ist der Armaclient überlastet und hat Probleme die Netzwerkkommunikation zu verwalten.</t>"],
-			format ["<t align='left'><t color='#ff1111'>AltisLife befindet sich gegenwärtig in der BETAPHASE. Verluste und Schäden durch RDM,VRDM etc. werden NICHT erstattet!</t>"],
-			format ["<t align='left'>Die Admins wünschen dir viel Spaß auf diesem Server.</t>"],
-			format ["<t align='left' color='#428BCA'>TS3 : TS_IP</t>"],
-			format ["<t align='left' color='#428BCA'>Forum : HOMEPAGE_LINK</t>"]
+			format ["<t align='left'><t color='#ff1111'>Bonjours Lentini Life</t>"],
+			format ["<t align='left'>Si ceci est votre première visite sur notre serveur, nous vous demandons de lire attentivement les règles. Ce que vous pouvez faire sur notre forum: http://lentinilife.forumactif.org/</t>"],
+			format ["<t align='left'>Si vous demandez maintenant ce produit vous apporte l'argent rapide et plus, appuyez sur <t color='#FF8000'>Z</t> et cliquez sur Exchange. Le marché boursier est toujours l'information la plus actuelle sur les prix des matières premières pour vous, puisque nous vivons dans une économie dynamique, les prix aussi toujours changer en proportion de la quantité de matières premières qui sont actuellement disponibles.</t>"],
+			format ["<t align='left'>Désynchronisations: La plupart des désynchronisations sont causés par le client, à un taux de trame de 30 FPS sous Armaclient est surchargé et a des problèmes pour gérer les communications réseau.</t>"],
+			format ["<t align='left'><t color='#ff1111'>Altis Life est actuellement en phase de devloppement.</t>"],
+			format ["<t align='left'>Les admins vous souhaitons beaucoup de plaisir sur ce serveur.</t>"],
+			format ["<t align='left' color='#428BCA'>TS3 : odin.evxv.net:10050</t>"],
+			format ["<t align='left' color='#428BCA'>Forum : http://lentinilife.forumactif.org/</t>"]
 		];
 	};
 	case independent:
 	{
         _text = [
-			format ["<t align='left'><t color='#ff1111'>Bitte halte dich auf unserem Server ans RolePlay, betrachte dies als deine erste und letzte Warnung!</t>"],
-			format ["<t align='left'>Wenn das dein erster Besuch auf unserem Server ist, bitten wir dich, die Regeln genauestens durchzulesen. Dies kannst Du in unserem Forum: SealDrop.de tun.</t>"],
-			format ["<t align='left'>Solltest du dich nun fragen welcher Rohstoff dir am schnellsten und meisten Geld bringt, drücke <t color='#FF8000'>Z</t> und klicke auf Börse. Die Börse hat immer die aktuellsten Informationen zu den Rohstoffpreisen für dich, da wir in einer dynamischen Wirtschaft leben werden die Preise sich auch immer ändern im Verhältniss zu der Menge an Rohstoffen die gerade verfügbar sind.</t>"],
-			format ["<t align='left'>Desyncs: Die meisten Desyncs sind durch die Clients bedingt, bei einer Framerate unter 30 FPS ist der Armaclient überlastet und hat Probleme die Netzwerkkommunikation zu verwalten.</t>"],
-			format ["<t align='left'><t color='#ff1111'>AltisLife befindet sich gegenwärtig in der BETAPHASE. Verluste und Schäden durch RDM,VRDM etc. werden NICHT erstattet!</t>"],
-			format ["<t align='left'>Die Admins wünschen dir viel Spaß auf diesem Server.</t>"],
-			format ["<t align='left' color='#428BCA'>TS3 : TS_IP</t>"],
-			format ["<t align='left' color='#428BCA'>Forum : HOMEPAGE_LINK</t>"]
+			format ["<t align='left'><t color='#ff1111'>Bonjours Lentini Life</t>"],
+			format ["<t align='left'>Si ceci est votre première visite sur notre serveur, nous vous demandons de lire attentivement les règles. Ce que vous pouvez faire sur notre forum: http://lentinilife.forumactif.org/</t>"],
+			format ["<t align='left'>Si vous demandez maintenant ce produit vous apporte l'argent rapide et plus, appuyez sur <t color='#FF8000'>Z</t> et cliquez sur Exchange. Le marché boursier est toujours l'information la plus actuelle sur les prix des matières premières pour vous, puisque nous vivons dans une économie dynamique, les prix aussi toujours changer en proportion de la quantité de matières premières qui sont actuellement disponibles.</t>"],
+			format ["<t align='left'>Désynchronisations: La plupart des désynchronisations sont causés par le client, à un taux de trame de 30 FPS sous Armaclient est surchargé et a des problèmes pour gérer les communications réseau.</t>"],
+			format ["<t align='left'><t color='#ff1111'>Altis Life est actuellement en phase de devloppement.</t>"],
+			format ["<t align='left'>Les admins vous souhaitons beaucoup de plaisir sur ce serveur.</t>"],
+			format ["<t align='left' color='#428BCA'>TS3 : odin.evxv.net:10050</t>"],
+			format ["<t align='left' color='#428BCA'>Forum : http://lentinilife.forumactif.org/</t>"]
 		];
 	};
 	case civilian:
 	{
         _text = [
-			format ["<t align='left'><t color='#ff1111'>Bitte halte dich auf unserem Server ans RolePlay, betrachte dies als deine erste und letzte Warnung!</t>"],
-			format ["<t align='left'>Wenn das dein erster Besuch auf unserem Server ist, bitten wir dich, die Regeln genauestens durchzulesen. Dies kannst Du in unserem Forum: SealDrop.de tun.</t>"],
-			format ["<t align='left'>Solltest du dich nun fragen welcher Rohstoff dir am schnellsten und meisten Geld bringt, drücke <t color='#FF8000'>Z</t> und klicke auf Börse. Die Börse hat immer die aktuellsten Informationen zu den Rohstoffpreisen für dich, da wir in einer dynamischen Wirtschaft leben werden die Preise sich auch immer ändern im Verhältniss zu der Menge an Rohstoffen die gerade verfügbar sind.</t>"],
-			format ["<t align='left'>Desyncs: Die meisten Desyncs sind durch die Clients bedingt, bei einer Framerate unter 30 FPS ist der Armaclient überlastet und hat Probleme die Netzwerkkommunikation zu verwalten.</t>"],
-			format ["<t align='left'><t color='#ff1111'>AltisLife befindet sich gegenwärtig in der BETAPHASE. Verluste und Schäden durch RDM,VRDM etc. werden NICHT erstattet!</t>"],
-			format ["<t align='left'>Die Admins wünschen dir viel Spaß auf diesem Server.</t>"],
-			format ["<t align='left' color='#428BCA'>TS3 : TS_IP</t>"],
-			format ["<t align='left' color='#428BCA'>Forum : HOMEPAGE_LINK</t>"]
+			format ["<t align='left'><t color='#ff1111'>Bonjours Lentini Life</t>"],
+			format ["<t align='left'>Si ceci est votre première visite sur notre serveur, nous vous demandons de lire attentivement les règles. Ce que vous pouvez faire sur notre forum: http://lentinilife.forumactif.org/</t>"],
+			format ["<t align='left'>Si vous demandez maintenant ce produit vous apporte l'argent rapide et plus, appuyez sur <t color='#FF8000'>Z</t> et cliquez sur Exchange. Le marché boursier est toujours l'information la plus actuelle sur les prix des matières premières pour vous, puisque nous vivons dans une économie dynamique, les prix aussi toujours changer en proportion de la quantité de matières premières qui sont actuellement disponibles.</t>"],
+			format ["<t align='left'>Désynchronisations: La plupart des désynchronisations sont causés par le client, à un taux de trame de 30 FPS sous Armaclient est surchargé et a des problèmes pour gérer les communications réseau.</t>"],
+			format ["<t align='left'><t color='#ff1111'>Altis Life est actuellement en phase de devloppement.</t>"],
+			format ["<t align='left'>Les admins vous souhaitons beaucoup de plaisir sur ce serveur.</t>"],
+			format ["<t align='left' color='#428BCA'>TS3 : odin.evxv.net:10050</t>"],
+			format ["<t align='left' color='#428BCA'>Forum : http://lentinilife.forumactif.org/</t>"]
 		];
 	};
 };

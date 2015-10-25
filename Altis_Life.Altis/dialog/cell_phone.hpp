@@ -11,7 +11,7 @@ class Life_cell_phone {
 		class Voxidphone : Life_RscPicture 
 		{
 			idc = 3001;
-			text = "Textures\telephone.paa";
+			text = "Textures\telephone.jpg";
 			x = 0.384999;
 			y = -0.00433818;
 			w = 0.8125;

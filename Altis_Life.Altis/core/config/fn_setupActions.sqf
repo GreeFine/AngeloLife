@@ -36,4 +36,8 @@ switch (playerSide) do
 		//Boule Quiès
 		life_actions = [player addAction["<t color='#ADFF2F'>Boule Quiès Oui/Non</t>",{if (soundVolume != 1) then {1 fadeSound 1;} else {1 fadeSound 0.1;};},"",-6,false,false,"",'vehicle player != player || soundVolume != 1']];
 	};
-};
+	
+	case independant:
+	{
+		//Boule Quiès
+		life_actions = [player addAction["<t color='#ADFF2F'>Boule Quiès Oui/Non</t>",{if (soundVolume != 1) then {1 fadeSound 1;} else {1 fadeSound 0.1;};},"",-6,false,false,"",'vehicle player != player || soundVolume !=

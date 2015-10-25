@@ -23,16 +23,15 @@ switch (_vehicle) do
 			case 4: {_color = "Dark Red";};
 			case 5: {_color = "Blue / White"};
 			case 6: {_color = "Black"};
-			case 7: {_color = "Black"};
+			case 7: {_color = "Gendarmerie"};
 			case 8: {_color = "Taxi"};
 			case 9: {_color = "Medic"};
 			case 10: {_color = "Rockstar Gelb"};
-			case 11: {_color = "Rockstar Lila"};
-			case 12: {_color = "GSG-9/SEK"}; 
-			case 13: {_color = "Hunter"}; 
-			case 14: {_color = "Dodge"};
-			case 15: {_color = "Weedfarmer"};	
-			case 16: {_color = "Monster"};
+			case 11: {_color = "Rockstar Lila"}; 
+			case 12: {_color = "Hunter"}; 
+			case 13: {_color = "Dodge"};
+			case 14: {_color = "Weedfarmer"};	
+			case 15: {_color = "Monster"};
 		};
 	};
 	
@@ -48,7 +47,7 @@ switch (_vehicle) do
 			case 5: {_color = "White"};
 			case 6: {_color = "Grey"};
 			case 7: {_color = "Black"};
-			case 8: {_color = "Polizei"};
+			case 8: {_color = "Gendarmerie"};
 		};
 	};
 	
@@ -62,7 +61,7 @@ switch (_vehicle) do
 			case 3: {_color = "Black / White"};
 			case 4: {_color = "Tan"};
 			case 5: {_color = "Green"};
-			case 6: {_color = "GSG9/SEK"};
+			case 6: {_color = "Gendarmerie"};
 			case 7: {_color = "Polizei"};
 			case 8: {_color = "Metallica"};
 			case 9: {_color = "Monster"};
@@ -75,20 +74,19 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "SealDrop";};
-			case 1: {_color = "Polizei";};
-			case 2: {_color = "Silver";};
-			case 3: {_color = "Orange";};
-			case 4: {_color = "SEK/GSG9";};
-			case 5: {_color = "Medic";};
-			case 6: {_color = "Polygon";};
-			case 7: {_color = "Camo";};
-			case 8: {_color = "MonsterEnergy";};
-			case 9: {_color = "Civil";};
-			case 10: {_color = "Civil 2";};
-			case 11: {_color = "Batman";};
-			case 12: {_color = "Ferrari";};
-			case 13: {_color = "Totenkopf";};
-			case 14: {_color = "Hello Kitty";};
+			case 1: {_color = "Silver";};
+			case 2: {_color = "Orange";};
+			case 3: {_color = "Gendarmerie";};
+			case 4: {_color = "Medic";};
+			case 5: {_color = "Polygon";};
+			case 6: {_color = "Camo";};
+			case 7: {_color = "MonsterEnergy";};
+			case 8: {_color = "Civil";};
+			case 9: {_color = "Civil 2";};
+			case 10: {_color = "Batman";};
+			case 11: {_color = "Ferrari";};
+			case 12: {_color = "Totenkopf";};
+			case 13: {_color = "Hello Kitty";};
 		};
 	};
 	
@@ -140,7 +138,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Polizei"};
+			case 0: {_color = "GIGN"};
 			case 1: {_color = "Black"};
 			case 2: {_color = "Civ Blue"};
 			case 3: {_color = "Civ Red"};
@@ -157,6 +155,7 @@ switch (_vehicle) do
 			case 14: {_color = "Medic"};
 			case 15: {_color = "Redbull"};
 			case 16: {_color = "Hello Kitty"};
+			case 16: {_color = "Gendarmerie"};
 		};
 	};
 	
@@ -177,9 +176,9 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "SEK"};
+			case 0: {_color = "Gendarmerie"};
 			case 1: {_color = "Donator"};
-			case 2: {_color = "Polizei"};
+			case 2: {_color = "GIGN"};
 		};
 	};
 

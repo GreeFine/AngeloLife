@@ -311,6 +311,8 @@ class Life_Client_Core
 		class removeWeapons {};
 		class civLoadout {};
 		class hasOrgan {};
+		class civInitCi {};
+		class HintCi {};
 	};
 
 	class Vehicle
@@ -362,6 +364,8 @@ class Life_Client_Core
 		class radarCam {};
 		class showArrestDialog {};
 		class arrestDialog_Arrest {};
+		class copShowLicense {};
+        	class copLicenseShown {};
 	};
 
 	class Gangs

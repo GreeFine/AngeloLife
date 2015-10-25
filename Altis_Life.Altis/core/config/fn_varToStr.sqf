@@ -35,9 +35,9 @@ switch (_var) do
 	case "life_inv_fuelE": {"Jérrican (Vide)"};
 	case "life_inv_fuelF": {"Jerrican"};
 	case "life_inv_pickaxe": {"Pioche"};
-	case "life_inv_copperore": {"Cuivre"};
+	case "life_inv_copperore": {"Minerai cuivre"};
 	case "life_inv_ironore": {"Minerai de fer"};
-	case "life_inv_ironr": {"Minerai de fer"};
+	case "life_inv_ironr": {"fer"};
 	case "life_inv_copperr": {"Cuivre"};
 	case "life_inv_sand": {"Sable"};
 	case "life_inv_salt": {"sel"};

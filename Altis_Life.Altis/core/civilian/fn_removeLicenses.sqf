@@ -63,4 +63,9 @@ switch (_state) do
 		license_civ_gun = false;
 		hintSilent localize "STR_Civ_RevokeLicense_Firearm";
 	};
+	//Death by a cop
+	case 4:
+	{
+		license_civ_rebel = false;
+	};
 };

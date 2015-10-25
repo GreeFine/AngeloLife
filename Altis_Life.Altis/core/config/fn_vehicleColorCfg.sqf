@@ -37,7 +37,7 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport04_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			[_path2 + "gendarmerie_hatch.jpg","cop"],
 			[_path2 + "police_hatchback.paa","cop"],
 			[_path2 + "civ_hatchback_metallica.jpg","civ"],
 			[_path2 + "hatchback_sport_ken_block.jpg","civ"]
@@ -56,12 +56,11 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa","civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
-			[_path + "police_offroad.paa","cop"],
+			[_path + "gendarmerie_offroad.jpg","cop"],
 			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
 			[_path + "OffRoad Pompiers.paa","med"],
 			[_path + "civ_offroad_rockstargelb.jpg","civ"],
 			[_path + "civ_offroad_rockstarlila.jpg","civ"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
 			[_path + "civ_offroad_camo.jpg","civ"],
 			[_path + "civ_offroad_dodge.jpg","civ"],
 			[_path + "civ_offroad_weed.jpg","civ"], 
@@ -91,7 +90,7 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","civ"],
-			[_path + "police_hatchback.paa","cop"]
+			[_path + "gendarmerie_hatch.jpg","cop"]
 		];
 	};
 	
@@ -101,10 +100,9 @@ switch (_vehicle) do
 		_ret =
 		[
 			[_path + "suv_sealdrop.jpg","civ"],
-			[_path + "police_suv.paa","cop"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			[_path + "gendarmerie_suv.jpg","cop"],
 			[_path + "medic_suv.jpg","med"],
 			[_path + "poly_suv.jpg","civ"],
 			[_path + "camo_suv.jpg","civ"],
@@ -159,7 +157,7 @@ switch (_vehicle) do
 		_path  = "skins\air\";
 		_ret = 
 		[
-			[_path + "police_heli.paa","cop"],
+			[_path + "gendarmerie_helifini.paa","cop"],
 			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa","civ"],
@@ -175,7 +173,8 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","civ"],
 			[_path + "medic_littlebird.jpg","med"], 
 			[_path + "civ_hummingbird_redbull.jpg","civ"], 
-			[_path + "kitty_heli.jpg","civ"]
+			[_path + "kitty_heli.jpg","civ"],
+			[_path + "gendarmerie_heli.jpg","cop"]
 		];
 	};
 	
@@ -198,9 +197,9 @@ switch (_vehicle) do
 		_path = "skins\car\";
 		_ret = 
 		[
-			[_path + "sek_hunter_1.paa","cop",_path + "sek_hunter_2.paa"],
+			[_path + "gendarmerie_hunter.jpg","cop",_path + "gendarmerie_hunter_back.jpg"],
 			[_path + "donator_hunter_front.jpg","civ",_path + "donator_hunter_hinten.jpg"],
-			[_path + "hunterpol_1.jpg","cop",_path + "hunterpol_2.jpg"]
+			[_path + "mrap_01_base_co_grille_noir.paa","cop",_path + "arriere fini 2.paa"]	
 		];
 	};
 	
@@ -221,7 +220,7 @@ switch (_vehicle) do
 		_path = "skins\car\";
 		_ret = 
 		[
-			[_path + "Zamak Back Pompiers.paa","med"]
+			[_path + "Zamak Back Pompiers.paa","Zamak Back Pompiers.paa""med"]
 		];
 	};
 

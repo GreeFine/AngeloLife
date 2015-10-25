@@ -21,6 +21,7 @@ waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done
 [] spawn life_fnc_IntroCam;
 
 // Uniformen Texturen START
+//medicLevel 2
 [] spawn
 {
 while {true} do
@@ -30,6 +31,7 @@ while {true} do
         waitUntil {uniform player != "U_B_HeliPilotCoveralls"};
     };
 };
+//medicLevel 1
 [] spawn
 {
 while {true} do
@@ -43,11 +45,22 @@ while {true} do
 {
 while {true} do
     {
+        waitUntil {uniform player == "U_O_OfficerUniform_ocamo"};
+        player setObjectTextureGlobal [0,"skins\human\medic\SapeursPompiers.paa"];
+        waitUntil {uniform player != "U_O_OfficerUniform_ocamo"};
+    };
+};
+// medicLevel 2
+[] spawn
+{
+while {true} do
+    {
         waitUntil {backpack player == "B_Kitbag_cbr"};
         (unitBackpack player) setObjectTextureGlobal [0,"skins\human\medic\adac_backpack.jpg"];
         waitUntil {backpack player != "B_Kitbag_cbr"};
     };
 };
+// medicLevel 1
 [] spawn
 {
 while {true} do
@@ -57,6 +70,16 @@ while {true} do
         waitUntil {backpack player != "B_Kitbag_sgg"};
     };
 };
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {backpack player == "B_Kitbag_cbr"};
+        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\medic\medic_backpackfini.paa"];
+        waitUntil {backpack player != "B_Kitbag_cbr"};
+    };
+};
+// medicLevel 1
 if((__GETC__(life_medicLevel)) == 1) exitWith {
 	[] call life_fnc_resetMedic;
 	license_med_air = true;

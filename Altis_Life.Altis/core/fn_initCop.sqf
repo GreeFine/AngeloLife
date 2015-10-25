@@ -42,6 +42,15 @@ while {true} do
         waitUntil {uniform player != "U_Rangemaster"};
     };
 };
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {backpack player == "B_Kitbag_sgg"};
+        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac_alcapone_2.paa"];
+        waitUntil {backpack player != "B_Kitbag_sgg"};
+    };
+};
 // CopLevel 2
 [] spawn
 {
@@ -67,9 +76,9 @@ while {true} do
 {
 while {true} do
     {
-        waitUntil {uniform player == "U_B_CombatUniform_mcam"};
-        player setObjectTextureGlobal [0,"skins\human\cop\Polo Gendarmerie.paa"];
-        waitUntil {uniform player != "U_B_CombatUniform_mcam"};
+        waitUntil {uniform player == "U_B_CombatUniform_mcam_worn"};
+        player setObjectTextureGlobal [0,"skins\human\cop\UniformeRAID fini2.paa"];
+        waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
     };
 };
 // CopLevel 6
@@ -77,9 +86,27 @@ while {true} do
 {
 while {true} do
     {
-        waitUntil {uniform player == "U_B_CombatUniform_mcam_worn"};
-        player setObjectTextureGlobal [0,"skins\human\cop\Uniforme Polaire Gendarme.paa"];
-        waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
+        waitUntil {uniform player == "U_B_CombatUniform_mcam"};
+        player setObjectTextureGlobal [0,"skins\human\cop\UniformeRAID fini2.paa"];
+        waitUntil {uniform player != "U_B_CombatUniform_mcam"};
 	};
+};
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {backpack player == "B_Kitbag_sgg"};
+        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac_alcapone_gign_3.paa"];
+        waitUntil {backpack player != "B_Kitbag_sgg"};
+    };
+};
+[] spawn
+{
+while {true} do
+    {
+        waitUntil {backpack player == "B_Bergen_blk"};
+        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac gign inverser.paa"];
+        waitUntil {backpack player != "B_Bergen_blk"};
+    };
 };
 //End CLothes

@@ -18,12 +18,12 @@
 	
 	_fnc_water = 
 	{
-		if(life_thirst < 2) then {player setDamage 1; hintSilent "You have died from dehydration.";}
+		if(life_thirst < 2) then {player setDamage 1; hintSilent "Vous mourrez de soif";}
 		else
 		{
 			life_thirst = life_thirst - 10;
 			[] call life_fnc_hudUpdate;
-			if(life_thirst < 2) then {player setDamage 1; hintSilent "You have died from dehydration.";};
+			if(life_thirst < 2) then {player setDamage 1; hintSilent "Vous mourrez de soif";};
 			switch(life_thirst) do 
 			{
 				case 30: {hintSilent"You haven't drank anything in awhile, You should find something to drink soon.";};
@@ -215,4 +215,11 @@
 			};
 		};
 	};
+};
+_illegalmarkers = ["chop_shop_1","cocaine processing","Dealer_1","Dealer_1_3","Dealer_1_4","weed_1","Weed_p_1","cocaine_1","coke_area","heroin_1","heroin_area","heroin_p","turtle_1","turtle_5","turtle_2","turtle_4","turtle_3","turtle_6","turle_dealer","chop_shop_2","chop_shop_3","chop_shop_4","Save_Reb","moonshine_destillerie","meth_1","meths_1","meth_cook_1","Acheteur d'alcool","uran_one","uran_two","uran_three","uranvier","uranium_1","uran_mine","SNI","meth_1_2","cocaine_2","coke_area_2","RB"];
+
+if (playerSide == west) then {
+
+{ deleteMarkerLocal _x; } forEach _illegalmarkers;
+
 }; 

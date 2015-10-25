@@ -21,7 +21,9 @@ switch (_filter) do
 		_ret = 
 		[
 			["U_Rangemaster","Tenue de pompier",500],
-			["U_B_HeliPilotCoveralls","blouse de depanneur",500]
+			["U_B_HeliPilotCoveralls","blouse de depanneur",500],
+			["U_O_OfficerUniform_ocamo","Tenue incendie de pompier",500]
+			
 		];
 	};
 	
@@ -66,7 +68,7 @@ switch (_filter) do
 		_ret =
 		[
 			["B_Kitbag_sgg","Sac de medecin",250],
-			["B_Kitbag_cbr","Sac de depanneur",250]
+			["B_Kitbag_cbr","Sac de pompier",250]
 		];
 	};
 };

@@ -4,15 +4,15 @@ _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alrig
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call (https://community.bistudio.com/wiki/addAction). Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
 
-if(side _robber != civilian) exitWith { hintSilent "You can not rob this station!" };
-if(_robber distance _shop > 5) exitWith { hintSilent "You need to be within 5m of the cashier to rob him!" };
+if(side _robber != civilian) exitWith { hintSilent "Vous ne pouvez pas braquer!" };
+if(_robber distance _shop > 5) exitWith { hintSilent "Vous devez etre a moins de 5 metre pour de la caisse!" };
 
 if !(_kassa) then { _kassa = 1000; };
-if (_rip) exitWith { hintSilent "Robbery already in progress!" };
-if (vehicle player != _robber) exitWith { hintSilent "Get out of your vehicle!" };
+if (_rip) exitWith { hintSilent "Vous volez la caisse ..." };
+if (vehicle player != _robber) exitWith { hintSilent "Sortez de votre vehicule" };
 
 if !(alive _robber) exitWith {};
-if (currentWeapon _robber == "") exitWith { hintSilent "HaHa, you do not threaten me! Get out of here you hobo!" };
+if (currentWeapon _robber == "") exitWith { hintSilent "Haha ! Vous compter me braquer sans arme ?" };
 if (_kassa == 0) exitWith { hintSilent "There is no cash in the register!" };
 
 _rip = true;
@@ -20,10 +20,10 @@ _kassa = 10000 + round(random 10000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 _chance = random(100);
-if(_chance >= 85) then { hintSilent "The cashier hit the silent alarm, police has been alerted!"; [[1,format["ALARM! - Gasstation: %1 is being robbed!", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; };
+if(_chance >= 85) then { hintSilent "L'alarme est activé, la gendarmerie est surment deja en route!"; [[1,format["ALARM! - Gasstation: %1 is being robbed!", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; };
 
 _cops = (west countSide playableUnits);
-if(_cops < 2) exitWith{[[_vault,-1],"disableSerialization;",false,false] spawn life_fnc_MP; hintSilent "There isnt enough Police to rob gas station!";};
+if(_cops < 2) exitWith{[[_vault,-1],"disableSerialization;",false,false] spawn life_fnc_MP; hintSilent "Il n'y a pas assez de gendarme!";};
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
 _ui = uiNameSpace getVariable "life_progress";
@@ -44,7 +44,7 @@ _pgText ctrlSetText format["Robbery in Progress, stay close (10m) (%1%2)...",rou
 _Pos = position player; // by ehno: get player pos
 				                _marker = createMarker ["Marker200", _Pos]; //by ehno: Place a Maker on the map
 				                "Marker200" setMarkerColor "ColorRed";
-				                "Marker200" setMarkerText "!ATTENTION! robbery !ATTENTION!";
+				                "Marker200" setMarkerText "!ATTENTION! Braquage !ATTENTION!";
 				                "Marker200" setMarkerType "mil_warning";			
 if(_cP >= 1) exitWith {};
 if(_robber distance _shop > 10.5) exitWith { };
