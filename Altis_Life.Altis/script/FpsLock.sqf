@@ -5,17 +5,18 @@
                         Script Description : Lock in Fps for Gun Fight.
 ///////////////////////////////////////////////*/
 FpsLockActive = false;
-Timer = 0;
+FpsLockTimer = 0;
 
 FpsLock_FNC = {
-if (Timer < 300) { Timer = Timer + 30; };
+if (isNil "FpsLockTimer" || isnil "FpsLockActive") then {FpsLockTimer = 0;FpsLockActive = false;};
+if (FpsLockTimer < 300) then { FpsLockTimer = FpsLockTimer + 30; };
 	 if (!FpsLockActive) then {
 	 	FpsLockActive = true;
 		while {FpsLockActive} do
 		{
-			if (Timer <= 0) exitWith { Timer = 0; FpsLockActive = false; };
+			if (FpsLockTimer <= 0) exitWith { FpsLockTimer = 0; FpsLockActive = false; };
 			sleep 1;
-			Timer = Timer - 1;
+			FpsLockTimer = FpsLockTimer - 1;
 		};
 	};
 };
