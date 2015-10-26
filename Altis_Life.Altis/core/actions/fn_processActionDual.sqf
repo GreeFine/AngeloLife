@@ -11,13 +11,13 @@ _type = [_this,3,"",[""]] call BIS_fnc_param;
 _speed = "medium";
 //Error check
 if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
-if ((_type == "uranium2") && (life_inv_puranium == 0)) exitWith {hintSilent "Sie haben kein Produkt um das Uran zu lösen.";};
+if ((_type == "uranium2") && (life_inv_puranium == 0)) exitWith {hintSilent "Sie haben kein Produkt um das Uran zu l?sen.";};
 
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing (percent) ..."
 _itemInfo = switch (_type) do
 {
-    case "uranium2": {["uranium2","puranium","uranium3",6000,"Aufgelöstes Legales Uran"];};
-    case "uranium2b": {["uranium2","ipuranium","uranium3",6000,"Aufgelöstes Illegales Uran"];};
+    case "uranium2": {["uranium2","puranium","uranium3",6000,"Aufgel?stes Legales Uran"];};
+    case "uranium2b": {["uranium2","ipuranium","uranium3",6000,"Aufgel?stes Illegales Uran"];};
     default {[]};
 };
 
@@ -83,8 +83,8 @@ if(_hasLicense) then
     else
 {
 
-    if(life_cash < _cost) exitWith {hintSilent format["Du benötigst $%1 für eine Lizenz",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-    
+    if(life_cash < _cost) exitWith {hintSilent format["Du ben?tigst $%1 f?r eine Lizenz",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
     while{true} do
     {
         uiSleep 0.5;
@@ -95,12 +95,12 @@ if(_hasLicense) then
         if(player distance _vendor > 10) exitWith {};
     };
     if(player distance _vendor > 10) exitWith {hintSilent "Du mussst mindesten 10 Meter daneben stehen."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-    if(life_cash < _cost) exitWith {hintSilent format["Du benötigst $%1 für eine Lizenz",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+    if(life_cash < _cost) exitWith {hintSilent format["Du ben?tigst $%1 f?r eine Lizenz",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([false,_oldItem1,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([false,_oldItem2,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem1,_oldVal] call life_fnc_handleInv; [true,_oldItem2,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
     5 cutText ["","PLAIN"];
-    titleText[format["Du hast %1 zu %2 umgewandelt und erhälst $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+    titleText[format["Du hast %1 zu %2 umgewandelt und erh?lst $%3",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
     life_cash = life_cash - _cost;
     life_is_processing = false;
-}; 
+};
