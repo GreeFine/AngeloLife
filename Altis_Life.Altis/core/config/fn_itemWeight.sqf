@@ -1,7 +1,7 @@
 /*
 	File: fn_itemWeight.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Gets the items weight and returns it.
 */
@@ -11,8 +11,8 @@ if(_item == "") exitWith {};
 
 switch (_item) do
 {
-	case "oilu": {8};
-	case "oilp": {4};
+	case "oilu": {6};
+	case "oilp": {3};
 	case "heroinu": {6};
 	case "heroinp": {4};
 	case "cannabis": {6};

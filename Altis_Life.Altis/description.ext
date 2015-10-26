@@ -13,7 +13,7 @@ scriptedPlayer = 1;
 joinUnassigned = 0;
 disabledAI = true;
 allowFunctionsLog = 0;
-disableChannels[]= {2};
+disableChannels[]= {0,1,2};
 enableDebugConsole = 1;
 forceRotorLibSimulation = 0;
 enableItemsDropping = 0;
@@ -66,21 +66,21 @@ class CfgSounds
 		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	
+
 	class tazersound
 	{
 		name = "Tazersound";
 		sound[] = {"\sounds\tazer.ogg", 0.25, 1};
 		titles[] = {};
 	};
-	
+
 	class flashbang
 	{
 		name = "flashbang";
 		sound[] = {"\sounds\flashbang.ogg", 0.75, 1};
 		titles[] = {};
 	};
-	
+
 	class car_lock
 	{
 		name = "car_lock";
@@ -137,7 +137,7 @@ class CfgSounds
 	};
 	class spraycan
 	{
-		name = "spraycan";	
+		name = "spraycan";
 		sound[] = {"sounds\spraycan.ogg", db-20, 1};
 		titles[] = {};
 	};
@@ -178,7 +178,7 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
-	
+
 	class Blacklisted
 	{
 		title = "Mission Fehlgeschlagen";
@@ -188,7 +188,7 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
-	
+
 	class SpyGlass
 	{
 		title = "SpyGlass hat dich gesehen";
@@ -210,7 +210,7 @@ class CfgNotifications
 		duration = 5;
 		priority = 7;
 	};
-	
+
 	class DeliveryAssigned
 	{
 		title = "Delivery Job Accepted";
@@ -219,7 +219,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 7;
 	};
-	
+
 	class DeliveryFailed
 	{
 		title = "Delivery Job Failed";
@@ -228,7 +228,7 @@ class CfgNotifications
 		duration = 7;
 		priority = 7;
 	};
-	
+
 	class DeliverySucceeded
 	{
 		title = "Delivery Job Completed";
@@ -237,7 +237,7 @@ class CfgNotifications
 		duration = 6;
 		priority = 6;
 	};
-	
+
 	class TextMessage
 	{
 		title = "Neue Textnachricht";
@@ -246,7 +246,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 6;
 	};
-	
+
 	class PoliceDispatch
 	{
 		title = "Polizei Notruf";
@@ -255,7 +255,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 6;
 	};
-	
+
 	class AdminDispatch
 	{
 		title = "Admin Nachrichten Center";
@@ -264,7 +264,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 6;
 	};
-	
+
 	class AdminMessage
 	{
 		title = "Admin Nachricht";

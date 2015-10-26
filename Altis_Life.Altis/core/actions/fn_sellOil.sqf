@@ -1,21 +1,22 @@
 #include <macro.h>
 /*
-	File: fn_sellOil.sqf
-	Author: Bryan "Tonic" Boardwine
-	
+	File: fn_sellTurtle.sqf
+
 	Description:
-	Sells the oil to the oil trader.
-	Will be revised.
+	Sells the turtles! Save the turtles!
+	This was a super lazy thing to do but I just want to push it...
 */
-private["_val"];
+private["_index","_price","_val"];
+if(life_inv_oilp == 0) exitWith {
+	titleText["Tu n'as pas de diesel à vendre !.","PLAIN"];
+};
 
+_index = ["oilp",__GETC__(sell_array)] call TON_fnc_index;
+_price = (__GETC__(sell_array) select _index) select 1;
 _val = life_inv_oilp;
+_price = _price * _val;
 
-if(life_inv_oilp < 10) exitWith { hintSilent "Du benötigst mindestens 10 Liter Euro Diesel";};
-if(([false,"oilp",_val] call life_fnc_handleInv)) then
-{
-	titleText[format["Du hast erfolgreich 10 Liter Euro-Diesel in Benzinkanister umgefüllt"],"PLAIN"];
-	life_inv_oilp = life_inv_oilp - 10;
-	life_inv_fuelF = life_inv_fuelF + 10;
-	life_carryWeight = life_carryWeight + 50;
+if([false,"oilp",life_inv_oilp] call life_fnc_handleInv) then {
+	titleText[format["Tu as vendu %1 diesel pour $%2",_val,[_price] call life_fnc_numberText],"PLAIN"];
+	life_cash = life_cash + _price;
 };
