@@ -2,7 +2,7 @@
 /*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main key handler for event 'keyDown'
 */
@@ -34,7 +34,7 @@ if(life_action_inUse) exitWith {
 if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	if(!life_action_inUse) then {
-		[] spawn 
+		[] spawn
 		{
 			private["_handle"];
 			_handle = [] spawn life_fnc_actionKeyHandler;
@@ -54,22 +54,22 @@ switch (_code) do
 		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested} && {(velocity player) select 2 < 2.5} && {time - jumpActionTime > 1.5}) then {
 			jumpActionTime = time; //Update the time.
 			[player,true] spawn life_fnc_jumpFnc; //Local execution
-			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution 
+			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution
 			_handled = true;
 		};
 	};
-	
+
 	//Map Key
 	case _mapKey:
 	{
-		switch (playerSide) do 
+		switch (playerSide) do
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 			case civilian: {if(!visibleMap) then {[] spawn life_fnc_gangMarkers;}};
 		};
 	};
-	
+
 	//Surrender... shift + g
 	case 34:
 	{
@@ -89,7 +89,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//Holster / recall weapon.
 	case 35:
 	{
@@ -98,19 +98,19 @@ switch (_code) do
 			player action ["SwitchWeapon", player, player, 100];
 			player switchcamera cameraView;
 		};
-		
+
 		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
 			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				player selectWeapon life_curWep_h;
 			};
 		};
 	};
-	
+
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey:
 	{
 		if(!life_action_inUse) then {
-			[] spawn 
+			[] spawn
 			{
 				private["_handle"];
 				_handle = [] spawn life_fnc_actionKeyHandler;
@@ -119,7 +119,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//Knock out - Shift + T
 	case 47:
 	{
@@ -132,14 +132,31 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//Restraining (Shift + R)
 	case 19:
 	{
 		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
-		{
-			[] call life_fnc_restrainAction;
+		if (playerSide == west) then {
+			if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+			{
+				[] call life_fnc_restrainAction;
+			};
+		};
+
+
+		if(playerSide == civilian) then {
+			if !(license_civ_rebel) exitWith { hintSilent "Tu dois posséder la license rebelle !"; };
+			if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+			{
+				if([false,"zipties",1] call life_fnc_handleInv) then
+				{
+					[] call life_fnc_restrainAction;
+					hintSilent format["Tu a menoter %1 !",name cursorTarget];
+				} else {
+					hintSilent "Tu n'as pas de menotte";
+				};
+			};
 		};
 	};
 
@@ -167,9 +184,9 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//L Key?
-	case 38: 
+	case 38:
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
@@ -184,10 +201,10 @@ switch (_code) do
 				};
 			};
 		};
-		
+
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
-	
+
 	//Z Player Menu
 	case 21:
 	{
@@ -196,7 +213,7 @@ switch (_code) do
 			[] call life_fnc_p_openMenu;
 		};
 	};
-	
+
 	//F Key
 	case 33:
 	{
@@ -213,12 +230,12 @@ switch (_code) do
 			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
 			if((_veh getVariable "siren")) then
 			{
-				titleText ["Sirene AUS","PLAIN"];
+				titleText ["Sirene Off","PLAIN"];
 				_veh setVariable["siren",false,true];
 			}
 				else
 			{
-				titleText ["Sirene AN","PLAIN"];
+				titleText ["Sirene On","PLAIN"];
 				_veh setVariable["siren",true,true];
 				if(playerSide == west) then {
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
@@ -228,7 +245,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//Ö Key
 	case 39:
 	{
@@ -244,12 +261,12 @@ switch (_code) do
 			if(isNil {_veh getVariable "siren2"}) then {_veh setVariable["siren2",false,true];};
 			if((_veh getVariable "siren2")) then
 			{
-				titleText ["Warnung AUS","PLAIN"];
+				titleText ["Warnung Off","PLAIN"];
 				_veh setVariable["siren2",false,true];
 			}
 				else
 			{
-				titleText ["Warnung AN","PLAIN"];
+				titleText ["Warnung On","PLAIN"];
 				_veh setVariable["siren2",true,true];
 				if(playerSide == west) then {
 					[[_veh],"life_fnc_copSiren2",nil,true] spawn life_fnc_MP;
@@ -259,25 +276,7 @@ switch (_code) do
 			};
 		};
 	};
-	
-	//Shift+O Zipties
-	case 24:
-	{
-		if(_shift) then {_handled = true;};
-		if(playerSide in [west,independent]) exitWith {};
-		if !(license_civ_rebel) exitWith { hintSilent "You need a rebel license !"; };
-		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
-		{
-			if([false,"zipties",1] call life_fnc_handleInv) then
-			{
-				[] call life_fnc_restrainAction;
-				hintSilent "You have cuffed him! ";
-			} else {
-				hintSilent "You don't have zipties";
-			};
-		};
-	};
-	
+
 	//U Key
 	case 22:
 	{
@@ -287,7 +286,7 @@ switch (_code) do
 			} else {
 				_veh = vehicle player;
 			};
-			
+
 			if(_veh isKindOf "House_F" && playerSide == civilian) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
@@ -296,11 +295,11 @@ switch (_code) do
 					if(_locked == 0) then {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
-						systemChat "The door has been locked";
+						systemChat "La porte as été fermer locked";
 					} else {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
-						systemChat "The door has been opened";
+						systemChat  "La porte as été ouverte locked";
 					};
 				};
 			} else {
@@ -312,22 +311,22 @@ switch (_code) do
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
-						systemChat "You have unlocked the vehicle";
+						systemChat "Tu as déverouillé le vehicle";
 						[[_veh],"life_fnc_LockCarSound",nil,true] spawn life_fnc_MP;
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
-						};	
-						systemChat "You have locked the vehicle";
+						};
+						systemChat "Tu as vérouillé le vehicle";
 						[[_veh],"life_fnc_UnLockCarSound",nil,true] spawn life_fnc_MP;
 					};
 				};
 			};
 		};
 	};
-	
+
 	//EMP Konsole - K
     case 37:
     {
@@ -336,7 +335,7 @@ switch (_code) do
             [] call life_fnc_openEmpMenu; [_this] call life_fnc_isEmpOperator;
         };
     };
-	
+
 	//Pickaxe - Q
 	case 41:
 	{
@@ -355,7 +354,7 @@ switch (_code) do
 			} foreach life_inv_items;
 		}
 	};
-	
+
 	//SmartPhone  Shift + 1
 	case 2:
 	{
@@ -368,7 +367,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//Wanted List Shift + 2
 	case 3:
 	{
@@ -382,7 +381,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	//Wanted List Shift + 3
 	case 4:
 	{
@@ -407,11 +406,11 @@ switch (_code) do
 
 	//Ü Nagelbänder
 	case 26:
-	{	
-		if(vehicle player != player) exitWith {hintSilent "You're in a vehicle!"};
+	{
+		if(vehicle player != player) exitWith {hintSilent "Tu est dans un véhicule!"};
 		if(playerSide == west) then {
-		
-		if(!isNull life_spikestrip) exitWith {hintSilent "You have placed a SpikeStrip"};
+
+		if(!isNull life_spikestrip) exitWith {hintSilent "Tu as placé un SpikeStrip"};
 		if(([false,"spikeStrip",1] call life_fnc_handleInv)) then
 		{
 			[] spawn life_fnc_spikeStrip;
@@ -419,7 +418,7 @@ switch (_code) do
 
 		};
 	};
-	
+/*
 	case 59: // F1
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
@@ -435,7 +434,7 @@ switch (_code) do
 		hintc "This button got blocked from the server";
 		_handled = false;
 	};
-			
+
 	case 61: // F3
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
@@ -443,7 +442,7 @@ switch (_code) do
 		_handled = false;
 	};
 
-	case 62: // F4 
+	case 62: // F4
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
 		closeDialog 0;
@@ -457,7 +456,7 @@ switch (_code) do
 		_handled = false;
 	};
 
-	case 64: //F6 key 
+	case 64: //F6 key
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
 		closeDialog 0;
@@ -471,40 +470,40 @@ switch (_code) do
 		_handled = false;
 	};
 
-	case 66: //F8 key 
-	{
-		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
-		closeDialog 0;
-		_handled = false;
-	};
-	
-	case 67: //F9 key 
+	case 66: //F8 key
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
 		closeDialog 0;
 		_handled = false;
 	};
 
-	case 68: //10 key 
+	case 67: //F9 key
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
 		closeDialog 0;
 		_handled = false;
 	};
-	
+
+	case 68: //10 key
+	{
+		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
+		closeDialog 0;
+		_handled = false;
+	};
+
 	case 211: //DELETE key
 	{
 		if(__GETC__(life_adminlevel) > 0) exitWith {hintSilent "AdminLogin successfull"};
 		closeDialog 0;
 		_handled = false;
 	};
-	
-	
+*/
+
 	case 67:
     {
         if(!_shift) then
         {
-           if (soundVolume != 1) then 
+           if (soundVolume != 1) then
            {
 	            1 fadeSound 1;
 	            titleText ["Vous avez enlevé vos boules quiès.", "PLAIN"];
