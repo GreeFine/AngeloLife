@@ -1,7 +1,7 @@
 /*
 	File: fn_vehicleWeightCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration for vehicle weight.
 */
@@ -31,7 +31,7 @@ switch (_className) do
 	case "I_MRAP_03_F": {100};
 	case "B_Heli_Light_01_F": {90};
 	case "O_Heli_Light_02_unarmed_F": {200};
-	case "I_Heli_Transport_02_F": {400};
+	case "I_Heli_Transport_02_F": {200};
 	case "C_Rubberboat": {45};
 	case "O_Boat_Armed_01_hmg_F": {75};
 	case "B_G_Boat_Transport_01_F": {45};
