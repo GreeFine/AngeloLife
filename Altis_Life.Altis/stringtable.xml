@@ -5105,68 +5105,89 @@
 		<Package name="Smartphone">
 		<Key ID="STR_PM_Smartphone">
 			<Original>Telefon</Original>
+			<French>Telephone</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_TITLE">
 			<Original>Telefon SMS</Original>
+			<French>Telephone SMS</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
 			<Original>Spielerliste</Original>
+			<French>Liste des joueurs</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_MESSAGETITLE">
 			<Original>Nachrichten  | VON | WANN</Original>
+			<French>Nouveaux</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
 			<Original>Nachricht zum lesen auswählen</Original>
+			<French>Selectionner un message a lire</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_SCHREIBEN">
 			<Original>Schreiben</Original>
+			<French>Redaction</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_NOTRUF">
 			<Original>Notruf</Original>
+			<French>Appel d'urgence</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_Absenden">
 			<Original>Absenden</Original>
+			<French>Soumettre</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
 			<Original>Nachricht an:</Original>
+			<French>Message a :</French>
 		</Key>
 		<Key ID="STR_SMARTPHONE_Notruftitle">
 			<Original>Kostenloser Notruf Dienst</Original>
+			<French>Service d'urgence gratuit</French>
 		</Key>
 		<Key ID="STR_pInAct_RevokeLicense">
 			<Orignal>Revoke Licenses</Orignal>
+			<French>Revoquer les licences</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Driver">
 			<Original>Your Drivers License has been REVOKED by the Police!</Original>
+			<French>Votre permis de conduire a été révoqué par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Truck">
 			<Original>Your Truck License has been REVOKED by the Police!</Original>
+			<French>Votre licence de camion a été révoquée par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Pilot">
 			<Original>Your Pilot License has been REVOKED by the Police!</Original>
+			<French>Votre licence de pilote a été révoquée par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Boating">
 			<Original>Your Boating License has been REVOKED by the Police!</Original>
+			<French>Votre permis de bateau a été révoquée par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Diving">
 			<Original>Your Diving License has been REVOKED by the Police!</Original>
+			<French>Votre licence de plongée a été révoquée par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Taxi">
 			<Original>Your Taxi License has been REVOKED by the Police!</Original>
+			<French>Votre licence de taxi a été révoquée par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_AllMotor">
 			<Original>Your Motor Vehicle Licenses have been REVOKED by the Police!</Original>
+			<French>Vos Licences véhicules automobiles a été révoquée par la police!</French>
 		</Key>
 		<Key ID="STR_Civ_RevokeLicense_Firearm">
 			<Original>Your Firearms License has been REVOKED by the Police!</Original>
+			<French>Votre permis de port d'arme a été révoquée par la police!</French>
 		</Key>
 		</Package>
 		<Key ID="STR_Civ_LicenseRemove_1a">
 			<Original>Durch Deine wiederholte Überschreitung der Geschwindigkeit, wurde Dir dein Führerschein entzogen.</Original>
+			<French>Votre permis de conduire a été révoquée par la police!</French>
 		</Key> 
 		<key ID="STR_pInAct_rob">
 			<Original>Ausrauben</Original>
 			<German>Ausrauben</German>
+			<French>Voler</French>
 		</Key>
 		<Package name="Craft">
 	<Key ID="STR_CRAFT_Title">
