@@ -1,7 +1,7 @@
 /*
 	File: fn_licensePrice.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Returns the license price.
 */
@@ -16,7 +16,7 @@ switch (_type) do
 	case "pilot": {50000}; //Pilot/air license cost
 	case "gun": {80000}; //Firearm/gun license cost
 	case "dive": {5000}; //Diving license cost
-	case "oil": {10000}; //Oil processing license cost
+	case "oil": {20000}; //Oil processing license cost
 	case "cair": {15000}; //Cop Pilot License cost
 	case "swat": {35000}; //Swat License cost
 	case "cg": {10000}; //Coast guard license cost
@@ -40,9 +40,9 @@ switch (_type) do
 	case "mair": {15000}; //Maische
 	case "home": {500000}; //Home Lizenz
 	case "adac": {10000}; //ADAC Lizenz
-	case "stiller":{25000}; //Abfüller
+	case "stiller":{25000}; //Abf?ller
 	case "liquor":{50000}; //Desti
-	case "bottler":{25000}; //Abfüller Lizenz
+	case "bottler":{25000}; //Abf?ller Lizenz
 	case "mash":{100000}; //Maische Lizenz
-	case "uranium": {150000}; //Uran Lizenz
+	case "uranium": {450000}; //Uran Lizenz
 };

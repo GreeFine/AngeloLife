@@ -273,7 +273,7 @@ sell_array =
 	["mullet",250],
 	["catshark",300],
 	["rabbit",65],
-	["oilp",2250],
+	["oilp",3500],
 	["turtle",5750],
 	["water",0],
 	["coffee",0],
