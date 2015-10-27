@@ -95,7 +95,9 @@ switch (_shop) do
 			_return set[count _return,
 			["O_Heli_Light_02_unarmed_F",600000]];
 			_return set[count _return,
-			["O_Heli_Transport_04_box_F",1500000]];
+			["O_Heli_Transport_04_box_F",1000000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_F",2000000]];
 		};
 	};
 

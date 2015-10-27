@@ -43667,18 +43667,6 @@ class Mission
 			type="mil_box";
 			colorName="ColorBlue";
 		};
-		class Item231
-		{
-			position[]={20309.557,36.31337,8489.0684};
-			name="RadioActiveZone";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGUER";
-			fillName="SolidBorder";
-			a=3000;
-			b=3000;
-			drawBorder=1;
-		};
 		class Item232
 		{
 			position[]={21779.404,9.6700764,6267.6333};
