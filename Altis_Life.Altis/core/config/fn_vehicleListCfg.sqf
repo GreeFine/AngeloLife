@@ -95,7 +95,9 @@ switch (_shop) do
 			_return set[count _return,
 			["O_Heli_Light_02_unarmed_F",600000]];
 			_return set[count _return,
-			["O_Heli_Transport_04_box_F",1500000]];
+			["O_Heli_Transport_04_box_F",1000000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_F",2000000]];
 		};
 	};
 
@@ -231,6 +233,22 @@ switch (_shop) do
 			["O_Heli_Light_02_unarmed_F",175000]];
 			_return set[count _return,
 			["I_Heli_Transport_02_F",650000]];
+			_return set[count _return,
+			["O_Truck_03_device_F",800000];
+			_return set[count _return,
+			["I_MRAP_03_F",850000]];
+			_return set[count _return,
+			["O_MRAP_02_F",180000]];
+			_return set[count _return,
+			["B_G_Offroad_01_armed_F",800000]];
+			_return set[count _return,
+			["I_Heli_Transport_02_F",800000]];
+			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",400000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_box_F",800000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_F",1000000]];
 		};
 	};
 
@@ -254,6 +272,16 @@ switch (_shop) do
 			["B_MRAP_01_F",200000]];
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",100000]];
+			_return set[count _return,
+			["B_G_Offroad_01_armed_F",700000]];
+			_return set[count _return,
+			["I_Heli_Transport_02_F",700000]];
+			_return set[count _return,
+			["O_Heli_Light_02_unarmed_F",300000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_box_F",700000]];
+			_return set[count _return,
+			["O_Heli_Transport_04_F",800000]];
 		};
 	};
 

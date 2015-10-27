@@ -2,13 +2,13 @@
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for the weapon shops.
-	
+
 	Return:
 	String: Close the menu
-	Array: 
+	Array:
 	[Shop Name,
 	[ //Array of items to add to the store
 		[classname,Custom Name (set nil for default),price]
@@ -73,19 +73,21 @@ switch(_shop) do
 						["muzzle_snds_L",nil,1000],
 						["muzzle_snds_M",nil,1000],
 						["muzzle_snds_H",nil,1000],
-						["muzzle_snds_B",nil,1000]
+						["muzzle_snds_B",nil,1000],
+						["U_I_HeliPilotCoveralls","Combinaison RadioActive",50000],
+                        ["H_PilotHelmetFighter_B","Casque RadioActif",25000]
 					]
 				];
 			};
 		};
 	};
-	
+
 	case "adac_basic":
 	{
-		switch (true) do 
+		switch (true) do
 		{
 			case (playerSide != independent): {"Vous n'ete pas depanneur!"};
-			case (__GETC__(life_mediclevel) < 2): {"vous n'ete pas depanneur!"}; 
+			case (__GETC__(life_mediclevel) < 2): {"vous n'ete pas depanneur!"};
 			default {
 				["Magasin de depanneur",
 					[
@@ -104,13 +106,13 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "med_basic":
 	{
-		switch (true) do 
+		switch (true) do
 		{
 			case (playerSide != independent): {"vous n'ete pas medecin!"};
-			case (__GETC__(life_mediclevel) < 1): {"vous n'ete pas medecin!"}; 
+			case (__GETC__(life_mediclevel) < 1): {"vous n'ete pas medecin!"};
 			default {
 				["Magasin hopital",
 					[
@@ -129,7 +131,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "cop_patrol":
 	{
 		switch(true) do
@@ -179,7 +181,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "cop_kommisar":
 	{
 		switch(true) do
@@ -206,8 +208,8 @@ switch(_shop) do
 				];
 			};
 		};
-	};	
-	
+	};
+
 	case "cop_sek":
 	{
 		switch(true) do
@@ -235,7 +237,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "cop_gsg":
 	{
 		switch(true) do
@@ -271,7 +273,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "rebel":
 	{
 		switch(true) do
@@ -301,6 +303,7 @@ switch(_shop) do
 						["optic_Hamr",nil,105],
 						["optic_NVS",nil,200],
 						["optic_DMS",nil,400],
+<<<<<<< HEAD
 						["optic_NVS",nil,100],
 						["SmokeShellGreen",nil,250],
 						["5Rnd_127x108_Mag",nil,200],
@@ -309,13 +312,23 @@ switch(_shop) do
 						["10Rnd_762x54_Mag",nil,125],
 						["30Rnd_556x45_Stanag",nil,50],
 						["30Rnd_65x39_caseless_green",nil,50],
+=======
+						["30Rnd_65x39_caseless_mag_Tracer",nil,150],
+						["SmokeShellGreen",nil,450],
+						["5Rnd_127x108_Mag",nil,300],
+						["20Rnd_762x51_Mag",nil,300],
+						["150Rnd_762x54_Box",nil,250],
+						["10Rnd_762x54_Mag",nil,225],
+						["30Rnd_556x45_Stanag",nil,150],
+						["30Rnd_65x39_caseless_green",nil,150],
+>>>>>>> origin/master
 						["6Rnd_45ACP_Cylinder",nil,100]
 					]
 				];
 			};
 		};
 	};
-	
+
 	case "gun":
 	{
 		switch(true) do
@@ -341,7 +354,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "donator":
 	{
 		switch(true) do
@@ -355,7 +368,12 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,6500],
 						["hgun_ACPC2_F",nil,11500],
 						["srifle_GM6_F",nil,250000],
+						["srifle_DMR_06_camo_F",nil,100000],
+						["LMG_Zafir_F",nil,100000],
+						["srifle_DMR_01_F",nil,70000],
+						["arifle_MXM_F",nil,70000],
 						["optic_ACO_grn_smg",nil,750],
+						["optic_LRPS",nil,100],
 						["hgun_pistol_heavy_01_F",nil,6000],
 						["optic_MRCO",nil,10000],
 						["ToolKit",nil,50],
@@ -439,7 +457,7 @@ switch(_shop) do
 		    };
 		};
 	};
-	
+
 	case "genstore":
 	{
 		["Brico depot",
@@ -471,10 +489,11 @@ switch(_shop) do
                     [
                         ["ToolKit",nil,200],
                         ["FirstAidKit",nil,100],
-                        ["U_I_HeliPilotCoveralls","Anti-Strahlungs Anzug",50000]
+                        ["U_I_HeliPilotCoveralls","Combinaison RadioActive",50000],
+                        ["H_PilotHelmetFighter_B","Casque RadioActif",25000]
                     ]
                 ];
             };
         };
-    }; 
+    };
 };

@@ -43646,7 +43646,7 @@ class Mission
 		{
 			position[]={20077.168,101.13097,6722.6548};
 			name="uran_three";
-			text="Mise en barre de l'uranium";
+			text="Séparation de l'uranium";
 			type="mil_box";
 			colorName="ColorGUER";
 			angle=-2.2829399;
@@ -43655,34 +43655,22 @@ class Mission
 		{
 			position[]={18732.629,208.72791,10228.474};
 			name="uranvier";
-			text="Séchage de l'uranium";
+			text="Mise en bar de l'uranium";
 			type="mil_box";
 			colorName="ColorGUER";
 		};
 		class Item230
 		{
 			position[]={25622.625,24.882774,21450.643};
-			name="uranverkäufer";
+			name="CommercantRadioactif";
 			text="Commerçant radioactif";
 			type="mil_box";
 			colorName="ColorBlue";
 		};
-		class Item231
-		{
-			position[]={21781.381,9.0845165,6268.7192};
-			name="uranium_1";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGUER";
-			fillName="SolidBorder";
-			a=100;
-			b=100;
-			drawBorder=1;
-		};
 		class Item232
 		{
 			position[]={21779.404,9.6700764,6267.6333};
-			name="uran_mine";
+			name="uranium_1";
 			text="Zone radioactive";
 			type="KIA";
 			colorName="ColorGUER";
@@ -44323,7 +44311,7 @@ class Mission
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="Grid";
+			fillName="Solid";
 			a=3500;
 			b=3500;
 			angle=3500;
@@ -44355,9 +44343,9 @@ class Mission
 		{
 			position[]={20309.557,36.31337,8489.0684};
 			name="ZN";
-			text="Zone interdite";
+			text="Zone interdite / Radioactivité forte !";
 			type="mil_objective";
-			colorName="ColorBlack";
+			colorName="ColorGreen";
 		};
 		class Item319
 		{

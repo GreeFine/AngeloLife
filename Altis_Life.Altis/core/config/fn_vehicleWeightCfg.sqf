@@ -29,8 +29,8 @@ switch (_className) do
 	case "B_Truck_01_covered_F": {600};
 	case "B_Truck_01_ammo_F": {650};
 	case "B_Truck_01_box_F": {800};
-	case "I_Truck_02_transport_F": {275};
-	case "I_Truck_02_covered_F": {300};
+	case "I_Truck_02_transport_F": {300};
+	case "I_Truck_02_covered_F": {350};
 	case "I_Truck_02_box_F": {750};
 	case "O_Truck_03_covered_F": {200};
 	case "O_Truck_03_transport_F": {400};
@@ -38,7 +38,8 @@ switch (_className) do
 	//Air
 	case "B_Heli_Light_01_F": {90};
 	case "O_Heli_Light_02_unarmed_F": {200};
-	case "O_Heli_Light_02_F": {500};
+	case "O_Heli_Light_02_F": {100};
+	case "O_Heli_Light_02_F": {200};
 	case "I_Heli_Transport_02_F": {200};
 	case "I_Heli_light_03_unarmed_F": {150};
 	//Box

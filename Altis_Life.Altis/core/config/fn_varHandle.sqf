@@ -1,7 +1,7 @@
 /*
 	File: fn_varHandle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master handler for getting a variables name, short name, etc.
 */
@@ -98,7 +98,7 @@ switch (_mode) do
 			case "scalpel": {"life_inv_scalpel"};
 		};
 	};
-	
+
 	case 1:
 	{
 		switch (_var) do
@@ -179,7 +179,7 @@ switch (_mode) do
             case "life_inv_uranium2": {"uranium2"}; // Add This
             case "life_inv_uranium3": {"uranium3"}; // Add This
             case "life_inv_uranium4": {"uranium4"}; // Add This
-            case "life_inv_uranium": {"uranium"}; // Add This 
+            case "life_inv_uranium": {"uranium"}; // Add This
 			case "life_inv_kidney": {"kidney"};
 			case "life_inv_scalpel": {"scalpel"};
 		};
