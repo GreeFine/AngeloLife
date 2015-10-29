@@ -37,7 +37,7 @@ life_deathCamera camCommit 20;
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
 //Jail if disconnect during death time.
-life_jailTime = 15;
+life_jailTime = 15.1777;
 life_is_arrested = true;
 [5] call SOCK_fnc_updatePartial;
 

@@ -1,7 +1,7 @@
 /*
 	File: fn_revived.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	THANK YOU JESUS I WAS SAVED!
 */
@@ -37,3 +37,8 @@ player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
 [] call life_fnc_hudUpdate; //Request update of hud.
+
+//JailSys on Death if disconnect during death time.
+life_jailTime = 0;
+life_is_arrested = false;
+[5] call SOCK_fnc_updatePartial;

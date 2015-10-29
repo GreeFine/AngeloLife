@@ -165,7 +165,7 @@ class CfgSounds
 		sound[] = {"sounds\caralarm.ogg", 1.0, 1};
 		titles[] = {};
 	};
-class caralarm
+	class MusicIntro
 	{
 		name= "Musique intro";
 		sound[] = {"sounds\introSong.ogg", 1.0, 1};

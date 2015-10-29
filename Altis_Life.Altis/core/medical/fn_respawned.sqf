@@ -1,7 +1,7 @@
 /*
 	File: fn_respawned.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sets the player up if he/she used the respawn option.
 */
@@ -51,6 +51,14 @@ if(!isNull life_corpse) then {
 //Destroy our camera...
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
+
+//JailSys on Death if disconnect during death time.
+//Check if is Time code of death auto jail sys
+if (life_jailTime == 15.1777) then {
+life_jailTime = 0;
+life_is_arrested = false;
+[5] call SOCK_fnc_updatePartial;
+};
 
 //Bad boy
 if(life_is_arrested) exitWith {
