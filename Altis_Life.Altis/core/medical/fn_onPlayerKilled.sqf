@@ -1,7 +1,7 @@
 /*
 	File: fn_onPlayerKilled.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	When the player dies collect various information about that player
 	and pull up the death dialog / camera functionality.
@@ -20,7 +20,7 @@ _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 _unit setVariable["missingOrgan",FALSE,TRUE]; //I DONT KNOW WHY SOMETIMES THEY ARE CAPS or not
-_unit setVariable["hasOrgan",FALSE,TRUE]; 
+_unit setVariable["hasOrgan",FALSE,TRUE];
 
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
@@ -36,6 +36,11 @@ life_deathCamera camCommit 20;
 
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
+//Jail if disconnect during death time.
+life_jailTime = 15;
+life_is_arrested = true;
+[5] call SOCK_fnc_updatePartial;
+
 //Create a thread for something?
 _unit spawn
 {
@@ -43,19 +48,19 @@ _unit spawn
 	disableSerialization;
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_Timer = ((findDisplay 7300) displayCtrl 7301);
-	
+
 	_maxTime = time + (life_respawn_timer * 60);
 	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
 	round(_maxTime - time) <= 0 || isNull _this || Life_request_timer};
-	
+
 	if (Life_request_timer) then {
 		_maxTime = time + (life_respawn_timer * 120);
-		waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+		waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
 		round(_maxTime - time) <= 0 || isNull _this};
 	};
 	Life_request_timer = false; //resets increased respawn timer
-	
+
 	_RespawnBtn ctrlEnable true;
 	_Timer ctrlSetText localize "STR_Medic_Respawn_2";
 };
@@ -80,7 +85,7 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 		};
 	} else {
 		[[getPlayerUID _killer,_killer getVariable["realname",name _killer],"187"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-		
+
 		if(!local _killer) then {
 			[[3],"life_fnc_removeLicenses",_killer,FALSE] spawn life_fnc_MP;
 		};
@@ -117,3 +122,6 @@ life_drink = 0;
 
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
+life_jailTime = 0;
+life_is_arrested = false;
+[5] call SOCK_fnc_updatePartial;

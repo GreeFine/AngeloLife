@@ -1,7 +1,7 @@
 /*
 	File: fn_jail.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Starts the initial process of jailing.
 */
@@ -11,14 +11,14 @@ hintSilent format["%1", _unit];
 if(isNull _unit) exitWith {}; //Dafuq?
 if(_unit != player) exitWith {}; //Dafuq?
 if(life_is_arrested) exitWith {}; //Dafuq i'm already arrested
-_time = [_this,2,15,[0]] call BIS_fnc_param;
+life_jailTime = [_this,2,15,[0]] call BIS_fnc_param;
 _bad = [_this,1,false,[false]] call BIS_fnc_param;
 
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
 
-titleText["Vous avez été arrêté, attendez de votre temps. Si vous tentez de respawn ou reconnectez votre temps va augmenter!","PLAIN"];
+titleText["Vous avez ?t? arr?t?, attendez de votre temps. Si vous tentez de respawn ou reconnectez votre temps va augmenter!","PLAIN"];
 hintSilent "For being arrested you have lost the following licenses if you own them\n\nFirearms License\nRebel License";
 player setPos (getMarkerPos "jail_marker");
 
@@ -58,5 +58,5 @@ removeAllWeapons player;
 removeUniform player;
 player forceAddUniform "U_C_Scientist";
 
-[[player,_bad,_time],"life_fnc_jailSys",false,false] spawn life_fnc_MP;
+[[player,_bad,life_jailTime],"life_fnc_jailSys",false,false] spawn life_fnc_MP;
 [5] call SOCK_fnc_updatePartial;
