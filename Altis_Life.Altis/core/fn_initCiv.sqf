@@ -64,3 +64,4 @@ while {true} do
 
 //Introcam
 [] spawn life_fnc_IntroCam;
+[] execVM "msgbienvenueCiv.sqf";

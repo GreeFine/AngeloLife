@@ -1,4 +1,4 @@
-author = "Tonic | Lentini Life";
+﻿author = "Tonic | Lentini Life";
 onLoadName = "٠٠•● Lentini Life ●•٠";
 onLoadMission = "AltisLife 3.1.4.8 | Lentini Life";
 wreckManagerMode = 1;
@@ -163,6 +163,12 @@ class CfgSounds
 	{
 		name= "caralarm";
 		sound[] = {"sounds\caralarm.ogg", 1.0, 1};
+		titles[] = {};
+	};
+class caralarm
+	{
+		name= "Musique intro";
+		sound[] = {"sounds\introSong.ogg", 1.0, 1};
 		titles[] = {};
 	};
 };
