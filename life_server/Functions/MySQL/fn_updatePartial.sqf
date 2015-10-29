@@ -59,7 +59,7 @@ switch(_mode) do {
 
 	case 5: {
 		_value1 = [_this,2,false,[true]] call BIS_fnc_param;
-		_value1 = [_value] call DB_fnc_bool;
+		_value1 = [_value1] call DB_fnc_bool;
 		_value2 = [_this,4,0,[0]] call BIS_fnc_param;
 		_value2 = [_value2] call DB_fnc_numberSafe;
 		_query = format["UPDATE players SET arrested='%1' , jail_time='%2' WHERE playerid='%3'",_value1,_value2,_uid];

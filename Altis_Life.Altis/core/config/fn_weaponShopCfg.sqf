@@ -303,7 +303,6 @@ switch(_shop) do
 						["optic_Hamr",nil,105],
 						["optic_NVS",nil,200],
 						["optic_DMS",nil,400],
-<<<<<<< HEAD
 						["optic_NVS",nil,100],
 						["SmokeShellGreen",nil,250],
 						["5Rnd_127x108_Mag",nil,200],
@@ -312,7 +311,6 @@ switch(_shop) do
 						["10Rnd_762x54_Mag",nil,125],
 						["30Rnd_556x45_Stanag",nil,50],
 						["30Rnd_65x39_caseless_green",nil,50],
-=======
 						["30Rnd_65x39_caseless_mag_Tracer",nil,150],
 						["SmokeShellGreen",nil,450],
 						["5Rnd_127x108_Mag",nil,300],
@@ -321,7 +319,6 @@ switch(_shop) do
 						["10Rnd_762x54_Mag",nil,225],
 						["30Rnd_556x45_Stanag",nil,150],
 						["30Rnd_65x39_caseless_green",nil,150],
->>>>>>> origin/master
 						["6Rnd_45ACP_Cylinder",nil,100]
 					]
 				];

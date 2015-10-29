@@ -41,6 +41,16 @@ life_jailTime = 15;
 life_is_arrested = true;
 [5] call SOCK_fnc_updatePartial;
 
+life_hunger = 100;
+life_thirst = 100;
+life_carryWeight = 0;
+life_cash = 0;
+life_battery = 50;
+life_drink = 0;
+
+[0] call SOCK_fnc_updatePartial;
+[3] call SOCK_fnc_updatePartial;
+
 //Create a thread for something?
 _unit spawn
 {
@@ -110,18 +120,5 @@ if(!isNull _killer && {_killer != _unit}) then {
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
-life_hunger = 100;
-life_thirst = 100;
-life_carryWeight = 0;
-life_cash = 0;
-life_battery = 50;
-life_drink = 0;
-
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
-
-[0] call SOCK_fnc_updatePartial;
-[3] call SOCK_fnc_updatePartial;
-life_jailTime = 0;
-life_is_arrested = false;
-[5] call SOCK_fnc_updatePartial;

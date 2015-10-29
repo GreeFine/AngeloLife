@@ -44,7 +44,7 @@ life_sitting = false;
 life_firstSpawn = false;
 life_bootVerleihInUse = false;
 life_bootVerleihDone = false;
-life_jailTime = 15;
+life_jailTime = 0;
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
