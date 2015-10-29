@@ -211,7 +211,8 @@ switch (_vehicle) do
 			["\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"],
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"],
 			[_path + "civ_zamak_redbull_0.jpg","civ",_path + "civ_zamak_redbull_1.jpg"],
-			[_path + "truck_02_kab_co.jpg","civ",_path + "truck_02_kuz_co.jpg"]
+			[_path + "truck_02_kab_co.jpg","civ",_path + "truck_02_kuz_co.jpg"],
+			[_path + "zamak weed avant.paa","civ",_path + "zamak weed arriere.paa"]
 		];
 	};
 

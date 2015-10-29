@@ -234,7 +234,7 @@ switch (_shop) do
 			_return set[count _return,
 			["I_Heli_Transport_02_F",650000]];
 			_return set[count _return,
-			["O_Truck_03_device_F",800000];
+			["O_Truck_03_device_F",800000]];
 			_return set[count _return,
 			["I_MRAP_03_F",850000]];
 			_return set[count _return,

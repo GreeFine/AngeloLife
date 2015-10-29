@@ -373,18 +373,19 @@ switch(_shop) do
 						["srifle_DMR_01_F",nil,70000],
 						["arifle_MXM_F",nil,70000],
 						["optic_ACO_grn_smg",nil,750],
-						["optic_LRPS",nil,100],
+						["optic_LRPS",nil,1000],
 						["hgun_pistol_heavy_01_F",nil,6000],
 						["optic_MRCO",nil,10000],
 						["ToolKit",nil,50],
-						["NVGoggles",nil,50000],
+						["NVGoggles",nil,5000],
 						["Rangefinder",nil,5000],
 						["itemgps",nil,50],
 						["FirstAidKit",nil,25],
 						["9Rnd_45ACP_Mag",nil,45],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
-						["5Rnd_127x108_Mag",nil,2000]
+						["5Rnd_127x108_Mag",nil,200],
+						["30Rnd_9x21_Mag",nil,75]
 					]
 				];
 			};
@@ -411,7 +412,8 @@ switch(_shop) do
 						["30Rnd_9x21_Mag",nil,75],
 						["11Rnd_45ACP_Mag",nil,85],
 						["30Rnd_556x45_Stanag",nil,125],
-						["5Rnd_127x108_Mag",nil,2000]
+						["5Rnd_127x108_Mag",nil,200],
+						["30Rnd_9x21_Mag",nil,75]
 					]
 				];
 			};
@@ -446,12 +448,13 @@ switch(_shop) do
 						["NVGoggles_INDEP",nil,25000],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_65x39_caseless_green",nil,750],
-						["10Rnd_762x51_Mag",nil,750],
+						["10Rnd_762x51_Mag",nil,100],
 						["20Rnd_762x51_Mag",nil,750],
 						["30Rnd_9x21_Mag",nil,75],
 						["11Rnd_45ACP_Mag",nil,85],
 						["9Rnd_45ACP_Mag",nil,100],
-						["30Rnd_556x45_Stanag",nil,125]
+						["30Rnd_556x45_Stanag",nil,125],
+						["30Rnd_9x21_Mag",nil,75]
 					]
 				];
 		    };
