@@ -46,9 +46,9 @@ while {true} do
 {
 while {true} do
     {
-        waitUntil {backpack player == "B_Kitbag_sgg"};
-        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac_alcapone_2.paa"];
-        waitUntil {backpack player != "B_Kitbag_sgg"};
+        waitUntil {backpack player == "B_AssaultPack_cbr"};
+        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac a dos gendarmerie.paa"];
+        waitUntil {backpack player != "B_AssaultPack_cbr"};
     };
 };
 // CopLevel 2

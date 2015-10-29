@@ -126,7 +126,6 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) > 0) then
 		{
-			_ret set[count _ret,["B_Kitbag_sgg",nil,500]];
 			_ret set[count _ret,["B_AssaultPack_cbr",nil,250]];
 		};
 		if(__GETC__(life_coplevel) > 5) then
