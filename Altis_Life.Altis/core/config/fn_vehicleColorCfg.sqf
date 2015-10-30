@@ -203,6 +203,15 @@ switch (_vehicle) do
 		];
 	};
 	
+	case "B_MRAP_01_hmg_F":
+	{
+		_path = "skins\car\";
+		_ret =
+		[
+			[_path + "mrap_01_base_co_grille_noir.paa","cop",_path + "arriere fini 2.paa"]
+		];
+	};
+	
 	case "I_Truck_02_covered_F":
 	{
 		_path = "skins\car\";

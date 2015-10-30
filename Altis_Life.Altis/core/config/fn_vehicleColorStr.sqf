@@ -181,6 +181,14 @@ switch (_vehicle) do
 			case 2: {_color = "GIGN"};
 		};
 	};
+	
+	case "B_MRAP_01_hmg_F":
+	{
+		switch (_index)  do
+		{
+			case 0: {_color = "GIGN"};;
+		};
+	};
 
 	case "O_MRAP_02_F":
 	{
