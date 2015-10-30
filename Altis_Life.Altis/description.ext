@@ -111,12 +111,6 @@ class CfgSounds
 		sound[] = {"sounds\empac.ogg", db-5, 1};
 		titles[] = {};
 	};
-	class welcome
-	{
-		name = "welcome";
-		sound[] = {"sounds\welcome.ogg", 1.0, 1};
-		titles[] = {};
-	};
 	class knockout
 	{
 		name = "knockout";
@@ -165,9 +159,9 @@ class CfgSounds
 		sound[] = {"sounds\caralarm.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	class MusicIntro
+	class introSong
 	{
-		name= "Musique intro";
+		name= "introSong";
 		sound[] = {"sounds\introSong.ogg", 1.0, 1};
 		titles[] = {};
 	};

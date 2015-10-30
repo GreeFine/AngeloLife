@@ -1,12 +1,20 @@
 /*
 	File: fn_spawnMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Initializes the spawn point selection menu.
 */
 private["_spCfg","_sp","_ctrl"];
 disableSerialization;
+
+//JailSys on Death if disconnect during death time.
+//Check if is Time code of death auto jail sys
+if (life_jailTime == 15.1777) then {
+life_jailTime = 0;
+life_is_arrested = false;
+[5] call SOCK_fnc_updatePartial;
+};
 
 if(life_is_arrested) exitWith {
 	[] call life_fnc_respawned;

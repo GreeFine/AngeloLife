@@ -51,14 +51,14 @@ switch (playerSide) do
 		_handle = [] spawn life_fnc_initCop;
 		waitUntil {scriptDone _handle};
 	};
-	
+
 	case civilian:
 	{
 		//Initialize Civilian Settings
 		_handle = [] spawn life_fnc_initCiv;
 		waitUntil {scriptDone _handle};
 	};
-	
+
 	case independent:
 	{
 		//Initialize Medics and blah
@@ -66,6 +66,7 @@ switch (playerSide) do
 		waitUntil {scriptDone _handle};
 	};
 };
+[] execVM "core\msgBienvenue.sqf";
 
 // Init automatically saving gear
 [] spawn life_fnc_autoSave;
