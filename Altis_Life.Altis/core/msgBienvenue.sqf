@@ -5,7 +5,7 @@
 */
 
 private [ "_camera", "_welcomeMessage", "_camDistance" ];
-_welcomeMessage = format["Bienvenue sur AltisLifeFr.com %1",format["%1", name player]];
+_welcomeMessage = format["Bienvenue sur Lentini life %1",format["%1", name player]];
 _camDistance = 40;
 waitUntil { alive player };
 //waituntil {!isnull (finddisplay 46)};
