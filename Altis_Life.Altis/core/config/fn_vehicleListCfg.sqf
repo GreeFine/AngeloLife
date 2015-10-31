@@ -10,7 +10,6 @@ private["_shop","_return"];
 _shop = [_this,0,"",[""]] call BIS_fnc_param;
 if(_shop == "") exitWith {[]};
 _return = [];
-_donartorPriceCoef = 1-((__GETC__(life_donator)*10)/100);
 switch (_shop) do
 {
 	case "med_air_1":
@@ -100,15 +99,6 @@ switch (_shop) do
 			_return set[count _return,
 			["O_Heli_Transport_04_F",2000000]];
 		};
-	};
-
-	case "reb_car":
-	{
-		_return =
-		[
-			["B_Quadbike_01_F",2500],
-			["B_G_Offroad_01_F",15000]
-		];
 	};
 
 	case "reb_car2":
@@ -220,24 +210,33 @@ switch (_shop) do
 	{
 		if(__GETC__(life_donator) > 0) then
 		{
+			_donartorPriceCoef = 1-((__GETC__(life_donator)*10)/100);
 			_return =
 			[
-				["B_Quadbike_01_F",(500 * _donartorPriceCoef)],
-				["C_Offroad_01_F",(2500 * _donartorPriceCoef)],
-				["C_Hatchback_01_sport_F",(10000 * _donartorPriceCoef)],
-				["C_SUV_01_F",(20000 * _donartorPriceCoef)],
-				["C_Van_01_fuel_F",(7500 * _donartorPriceCoef)],
-				["O_Heli_Light_02_unarmed_F",(175000 * _donartorPriceCoef)],
-				["I_Heli_Transport_02_F",(650000 * _donartorPriceCoef)],
-				["O_Truck_03_device_F",(800000 * _donartorPriceCoef)],
-				["I_MRAP_03_F",(850000 * _donartorPriceCoef)],
-				["O_MRAP_02_F",(180000 * _donartorPriceCoef)],
-				["B_G_Offroad_01_armed_F",(800000 * _donartorPriceCoef)],
-				["O_Heli_Transport_04_box_F",(800000 * _donartorPriceCoef)],
-				["O_Heli_Transport_04_F",(1000000 * _donartorPriceCoef)],
-				["B_Heli_Light_01_F",(100000 * _donartorPriceCoef)],
-				["B_Truck_01_box_F",(250000 * _donartorPriceCoef)],
-				["B_MRAP_01_F",(200000 * _donartorPriceCoef)]
+				["B_Quadbike_01_F",2500 * _donartorPriceCoef],
+				["C_Van_01_fuel_F",40000 * _donartorPriceCoef],
+				["C_Hatchback_01_F",12500 * _donartorPriceCoef],
+				["C_Offroad_01_F",10000 * _donartorPriceCoef],
+				["C_SUV_01_F",25000 * _donartorPriceCoef],
+				["C_Van_01_transport_F",60000 * _donartorPriceCoef],
+				["C_Hatchback_01_sport_F",150000 * _donartorPriceCoef],
+				["C_Van_01_box_F",85000 * _donartorPriceCoef],
+				["I_Truck_02_transport_F",225000 * _donartorPriceCoef],
+				["I_Truck_02_covered_F",265000 * _donartorPriceCoef],
+				["B_Truck_01_transport_F",350000 * _donartorPriceCoef],
+				["B_Truck_01_covered_F",400000 * _donartorPriceCoef],
+				["B_Truck_01_ammo_F",450000 * _donartorPriceCoef],
+				["B_Truck_01_box_F",500000 * _donartorPriceCoef],
+				["O_Truck_03_device_F",1000000 * _donartorPriceCoef],
+				["B_Quadbike_01_F",2500 * _donartorPriceCoef],
+				["B_G_Offroad_01_F",1500 * _donartorPriceCoef],
+				["O_MRAP_02_F",500000 * _donartorPriceCoef],
+				["B_Heli_Light_01_F",325000 * _donartorPriceCoef],
+				["B_G_Offroad_01_armed_F",1000000 * _donartorPriceCoef],
+				["I_Heli_Transport_02_F",1000000 * _donartorPriceCoef],
+				["O_Heli_Light_02_unarmed_F",600000 * _donartorPriceCoef],
+				["O_Heli_Transport_04_box_F",1000000 * _donartorPriceCoef],
+				["O_Heli_Transport_04_F",2000000 * _donartorPriceCoef]
 			];
 		};
 	};

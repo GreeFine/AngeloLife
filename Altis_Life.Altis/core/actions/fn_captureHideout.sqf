@@ -1,7 +1,7 @@
 #include <macro.h>
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Blah blah.
 */
@@ -20,7 +20,7 @@ if(!isNull _group) then {
 		localize "STR_Global_Yes",
 		localize "STR_Global_No"
 	] call BIS_fnc_guiMessage;
-	
+
 	_cpRate = 0.0045;
 } else {
 	_cpRate = 0.0075;
@@ -71,6 +71,7 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR
 life_action_inUse = false;
 
 titleText["Hideout has been captured.","PLAIN"];
+"gang_flag_2" setmarkerText ((group player) getVariable "gang_name");
 _flagTexture = [
 		"\A3\Data_F\Flags\Flag_red_CO.paa",
 		"\A3\Data_F\Flags\Flag_green_CO.paa",
