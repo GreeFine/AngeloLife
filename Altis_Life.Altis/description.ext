@@ -22,7 +22,7 @@ respawn = BASE;
 respawndelay = 15;
 debriefing = 0;
 briefing = 0;
-loadScreen = skins\loadscreen.jpg;
+loadScreen = skins\LogoChargement.jpg;
 
 class Header
 {
