@@ -8,7 +8,8 @@ _j = 0;
     _marker setMarkerText (_x select 0);
     _marker setMarkerColor "ColorWhite";
     _j = _j+1;
-} forEach [["Port d'Iremi",[5078,9961]],["Port de Katalaki",[14252,13054]],["Port de FineGree",[16551,15561]],["Port de Trachia",[22138,8497]],["Port de Molos",[27642.5,24591]],["Port de kategidis",[22789,13789]],["Port de Agia Triada",[16711,20554]]];
+} forEach [["Port d'Iremi",[5078,9961]],["Port de Neochori",[12697,14217]],["Port de Pyrgos",[16538.1,12462.2]],["Port de Trachia",[22138,8497]],["Port de Molos",[27642.5,24591]],["Port de kategidis",[22789,13789]],["Port de Agia Triada",[16711,20554]],["Port le FineGree",[16538,12462]]];
+_j = _j -1;
 
 while {true} do {
     _MarchandRequest = MarchandRequest;
@@ -76,7 +77,6 @@ while {true} do {
 
                 for "_i" from 0 to _Nbox do {
                         _caise1 = createVehicle ["Box_East_WpsSpecial_F",[0,0,100],[],0,""];
-                        _caise1 addAction ["<t color=""#4DB0E2"">"+"Move Box",Gree_fnc_MoveBox];
                         clearWeaponCargoGlobal _caise1;
                         clearMagazineCargoGlobal _caise1;
                         clearItemCargoGlobal _caise1;
@@ -95,3 +95,4 @@ while {true} do {
     } forEach _MarchandRequest;
     publicVariable "MarchandRequest";
 };
+/*                        _caise1 addAction ["<t color=""#4DB0E2"">"+"Move Box",Gree_fnc_MoveBox]; */

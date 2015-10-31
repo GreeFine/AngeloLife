@@ -111,40 +111,16 @@ class CfgSounds
 		sound[] = {"sounds\empac.ogg", db-5, 1};
 		titles[] = {};
 	};
-	class knockout
-	{
-		name = "knockout";
-		sound[] = {"sounds\knockout.ogg", 1.0, 1};
-		titles[] = {};
-	};
   	class MedicSirenLong
 	{
 		name = "MedicSirenLong";
 		sound[] = {"sounds\MedicSirenLong.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	class speech
-	{
-		name = "speech";
-		sound[] = {"sounds\speech.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	class spraycan
-	{
-		name = "spraycan";
-		sound[] = {"sounds\spraycan.ogg", db-20, 1};
-		titles[] = {};
-	};
 	class alert
 	{
 		name= "alert";
 		sound[] = {"sounds\alert.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	class mari
-	{
-		name= "mari";
-		sound[] = {"sounds\mari.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	class PhotoSound

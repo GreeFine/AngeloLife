@@ -317,7 +317,7 @@ Gree_fnc_MoveBox =
 compileFinal "
 	_target = cursorTarget;
 	if (isNil ""MoveBox_Curent"") then {
-		_target attachTo [player,[0,1,1]];
+		_target attachTo [player,[0,1,0.4]];
 		MoveBox_Curent = _target;
 	} else {
 		detach MoveBox_Curent;
