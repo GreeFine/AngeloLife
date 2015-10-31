@@ -1,7 +1,7 @@
 /*
 	File: fn_initCiv.sqf
 	Author: Bryan "Tonic" Boardwine
-
+	
 	Description:
 	Initializes the civilian.
 */
@@ -64,3 +64,4 @@ while {true} do
 
 //Introcam
 [] spawn life_fnc_IntroCam;
+[] execVM "msgbienvenueCiv.sqf";
