@@ -181,7 +181,7 @@
 	{
 		private["_damage"];
 		uiSleep 1;
-		while {((player distance (getMarkerPos "Zone interdit") < 2800) && (player getVariable["Revive",TRUE]))} do
+		while {((player distance (getMarkerPos "Zone_interdite") < 2800) && (player getVariable["Revive",TRUE]))} do
 		{
 			if(uniform player == "U_I_HeliPilotCoveralls" && headgear player == "H_PilotHelmetFighter_B") then
 			{

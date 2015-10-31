@@ -8,19 +8,19 @@
 private["_ret","_bad","_bail","_esc","_countDown"];
 _ret = [_this,0,[],[[]]] call BIS_fnc_param;
 _bad = [_this,1,false,[false]] call BIS_fnc_param;
-life_jailTime = [_this,2,15,[0]] call BIS_fnc_param; //##80
+_time = [_this,2,15,[0]] call BIS_fnc_param; //##80
 
-life_jailTime = time + (life_jailTime * 60); //x Minutes
+_time = time + (_time * 60); //x Minutes
 
-//if(_bad) then { life_jailTime = time + 1100; } else { life_jailTime = time + (15 * 60); }; //##80 (time loaded from DB)
+//if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); }; //##80 (time loaded from DB)
 
-if(count _ret > 0) then { life_bail_amount = (_ret select 3); } else { life_bail_amount = 20000; /*life_jailTime = time + (10 * 60); */};
+if(count _ret > 0) then { life_bail_amount = (_ret select 3); } else { life_bail_amount = 20000; /*_time = time + (10 * 60); */};
 _esc = false;
 _bail = false;
 
-if(life_jailTime <= 0) then { life_jailTime = time + (15 * 60); hintC "Please Report to Admin: JAIL_FALLBACK_15, time is zero!"; };
+if(_time <= 0) then { _time = time + (15 * 60); hintC "Please Report to Admin: JAIL_FALLBACK_15, time is zero!"; };
 
-[_bad,life_jailTime] spawn
+[_bad,_time] spawn
 {
 	life_canpay_bail = false;
 	life_bail_amount = life_bail_amount * 5;
@@ -41,9 +41,9 @@ if(life_jailTime <= 0) then { life_jailTime = time + (15 * 60); hintC "Please Re
 
 while {true} do
 {
-	if((round(life_jailTime - time)) > 0) then
+	if((round(_time - time)) > 0) then
 	{
-		_countDown = if(round (life_jailTime - time) > 60) then {format["%1 minute(s)",round(round(life_jailTime - time) / 60)]} else {format["%1 second(s)",round(life_jailTime - time)]};
+		_countDown = if(round (_time - time) > 60) then {format["%1 minute(s)",round(round(_time - time) / 60)]} else {format["%1 second(s)",round(_time - time)]};
 		if(isNil "life_canpay_bail") then
 		{
 			hintSilent format["Time Remaining:\n %1\n\nCan pay Bail: %3\nBail Amount: $%2",_countDown,[life_bail_amount] call life_fnc_numberText];
@@ -65,8 +65,8 @@ while {true} do
 		_bail = true;
 	};
 
-	if((round(life_jailTime - time)) < 1) exitWith {hintSilent ""};
-	if(!alive player && ((round(life_jailTime - time)) > 0)) exitWith
+	if((round(_time - time)) < 1) exitWith {hintSilent ""};
+	if(!alive player && ((round(_time - time)) > 0)) exitWith
 	{
 
 	};
