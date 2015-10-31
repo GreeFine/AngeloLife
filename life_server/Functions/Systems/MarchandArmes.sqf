@@ -12,7 +12,7 @@ _j = 0;
 
 while {true} do {
     _MarchandRequest = MarchandRequest;
-    sleep 1200;
+    sleep 60;
     {
     _nombre = _x select 0;
     _Player = _x select 1;
@@ -91,7 +91,7 @@ while {true} do {
 
         _msg = format["Votre Collis est arrivé au port ! depechez vous de le récuperer. port : %1", markerText format["CargoWeapon%1",_rand]];
         [[_msg,"Message Anonyme",0],"TON_fnc_clientMessage",_Player,false] spawn life_fnc_MP;
+        MarchandRequest = MarchandRequest - _x;
     } forEach _MarchandRequest;
-    MarchandRequest = MarchandRequest - _MarchandRequest;
     publicVariable "MarchandRequest";
 };
