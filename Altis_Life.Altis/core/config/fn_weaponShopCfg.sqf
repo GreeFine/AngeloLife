@@ -18,7 +18,7 @@ private["_shop"];
 _shop = [_this,0,"",[""]] call BIS_fnc_param;
 if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.
 _donartorPriceCoef = 9999;
-if (__GETC__(life_donator) > 0) then { _donartorPriceCoef = 1-((__GETC__(life_donator)*10)/100); };
+if (__GETC__(life_donator) > 0) then { _donartorPriceCoef = 1-((__GETC__(life_donator)*10)/100); }; //maj
 switch(_shop) do
 {
 	case "cop_basic":
