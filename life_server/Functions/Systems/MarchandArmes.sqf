@@ -8,7 +8,7 @@ _j = 0;
     _marker setMarkerText (_x select 0);
     _marker setMarkerColor "ColorWhite";
     _j = _j+1;
-} forEach [["Port d'Iremi",[5078,9961]],["Port de Katalaki",[14252,13054]],["Port de FineGree",[16551,15561]],["Port de Trachia",[22138,8497]],["Port de Molos",[27643,24578]],["Port de kategidis",[22789,13789]],["Port de Agia Triada",[16711,20554]]];
+} forEach [["Port d'Iremi",[5078,9961]],["Port de Katalaki",[14252,13054]],["Port de FineGree",[16551,15561]],["Port de Trachia",[22138,8497]],["Port de Molos",[27642.5,24591]],["Port de kategidis",[22789,13789]],["Port de Agia Triada",[16711,20554]]];
 
 while {true} do {
     _MarchandRequest = MarchandRequest;
@@ -48,40 +48,46 @@ while {true} do {
             };
 
                 _Nbox = round(_nombre/2);
-                _caise = createVehicle ["Box_East_WpsSpecial_F",position player,[],0,""];
+                _SelectedWeapon = 0;
+                _caise = createVehicle ["Box_East_WpsSpecial_F",[0,0,100],[],0,""];
                 clearWeaponCargoGlobal _caise;
                 clearMagazineCargoGlobal _caise;
                 clearItemCargoGlobal _caise;
                 _caise setpos position _veh;
                 _caise setdir 90;
-                _caise addWeaponCargoGlobal [_armes select 0,1];
-                _SelectedWeapon = 1;
-
-                        for "_i" from 1 to _Nbox do {
-                                _caise1 = createVehicle ["Box_East_WpsSpecial_F",position player,[],0,""];
-                                clearWeaponCargoGlobal _caise1;
-                                clearMagazineCargoGlobal _caise1;
-                                clearItemCargoGlobal _caise1;
-                                _caise1 attachTo [_caise,[0,0,(_i*0.35)]];
-                                for "_i" from 1 to 4 do
-                                {
-                                    _caise1 addWeaponCargoGlobal [_armes select _SelectedWeapon,1];
-                                    _SelectedWeapon = _SelectedWeapon + 1;
-                                };
+                for "_i" from 1 to 4 do
+                {
+                    _caise addWeaponCargoGlobal [_armes select _SelectedWeapon,1];
+                    _SelectedWeapon = _SelectedWeapon + 1;
+                };
+                for "_i" from 1 to _Nbox do {
+                        _caise1 = createVehicle ["Box_East_WpsSpecial_F",[0,0,100],[],0,""];
+                        clearWeaponCargoGlobal _caise1;
+                        clearMagazineCargoGlobal _caise1;
+                        clearItemCargoGlobal _caise1;
+                        _caise1 attachTo [_caise,[0,0,(_i*0.35)]];
+                        for "_i" from 1 to 4 do
+                        {
+                            _caise1 addWeaponCargoGlobal [_armes select _SelectedWeapon,1];
+                            _SelectedWeapon = _SelectedWeapon + 1;
                         };
+                        detach _caise1;
+                };
 
-                        for "_i" from 0 to _Nbox do {
-                                _caise1 = createVehicle ["Box_East_WpsSpecial_F",position player,[],0,""];
-                                clearWeaponCargoGlobal _caise1;
-                                clearMagazineCargoGlobal _caise1;
-                                clearItemCargoGlobal _caise1;
-                                _caise1 attachTo [_caise,[0,1,(_i*0.35)]];
-                                for "_i" from 1 to 4 do
-                                {
-                                    _caise1 addWeaponCargoGlobal [_armes select _SelectedWeapon,1];
-                                    _SelectedWeapon = _SelectedWeapon + 1;
-                                };
+                for "_i" from 0 to _Nbox do {
+                        _caise1 = createVehicle ["Box_East_WpsSpecial_F",[0,0,100],[],0,""];
+                        _caise1 addAction ["<t color=""#4DB0E2"">"+"Move Box",Gree_fnc_MoveBox];
+                        clearWeaponCargoGlobal _caise1;
+                        clearMagazineCargoGlobal _caise1;
+                        clearItemCargoGlobal _caise1;
+                        _caise1 attachTo [_caise,[0,1,(_i*0.35)]];
+                        for "_i" from 1 to 4 do
+                        {
+                            _caise1 addWeaponCargoGlobal [_armes select _SelectedWeapon,1];
+                            _SelectedWeapon = _SelectedWeapon + 1;
                         };
+                        detach _caise1;
+                };
 
         _msg = format["Votre Collis est arrivé au port ! depechez vous de le récuperer. port : %1", markerText format["CargoWeapon%1",_rand]];
         [[_msg,"Message Anonyme",0],"TON_fnc_clientMessage",_Player,false] spawn life_fnc_MP;

@@ -23,6 +23,8 @@ compileFinal "
 	_return;
 ";
 
+publicVariable "TON_fnc_index";
+
 TON_fnc_player_query =
 compileFinal "
 	private[""_ret""];
@@ -34,7 +36,6 @@ compileFinal "
 ";
 publicVariable "TON_fnc_player_query";
 
-publicVariable "TON_fnc_index";
 
 TON_fnc_clientWireTransfer =
 compileFinal "
@@ -311,3 +312,17 @@ compileFinal "
 	};
 ";
 publicVariable "TON_fnc_clientMessage";
+
+Gree_fnc_MoveBox =
+compileFinal "
+	_target = cursorTarget;
+	if (isNil ""MoveBox_Curent"") then {
+		_target attachTo [player,[0,1,1]];
+		MoveBox_Curent = _target;
+	} else {
+		detach MoveBox_Curent;
+		MoveBox_Curent setPos position MoveBox_Curent;
+		MoveBox_Curent = nil;
+	};
+";
+publicVariable "Gree_fnc_MoveBox";
