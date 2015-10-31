@@ -8,11 +8,13 @@ _j = 0;
     _marker setMarkerText (_x select 0);
     _marker setMarkerColor "ColorWhite";
     _j = _j+1;
-} forEach [["Port d'Iremi",[5078,9961]],["Port de Neochori",[12697,14217]],["Port de Pyrgos",[16538.1,12462.2]],["Port de Trachia",[22138,8497]],["Port de Molos",[27642.5,24591]],["Port de kategidis",[22789,13789]],["Port de Agia Triada",[16711,20554]],["Port le FineGree",[16538,12462]]];
+} forEach [["Port d'Iremi",[5078,9961]],["Port de Neochori",[12697,14217]],["Port de Pyrgos",[16538.1,12462]],["Port de Trachia",[22138,8497]],["Port de Molos",[27642.5,24591]],["Port de kategidis",[22789,13789]],["Port de Agia Triada",[16711,20554]],["Port le FineGree",[21076,19914]]];
 _j = _j -1;
 
 while {true} do {
     _MarchandRequest = MarchandRequest;
+    MarchandRequest = [];
+    publicVariable "MarchandRequest";
     sleep 60;
     {
     _nombre = _x select 0;
@@ -91,8 +93,6 @@ while {true} do {
 
         _msg = format["Votre Collis est arrivé au port ! depechez vous de le récuperer. port : %1", markerText format["CargoWeapon%1",_rand]];
         [[_msg,"Message Anonyme",0],"TON_fnc_clientMessage",_Player,false] spawn life_fnc_MP;
-        MarchandRequest = MarchandRequest - _x;
     } forEach _MarchandRequest;
-    publicVariable "MarchandRequest";
 };
 /*                        _caise1 addAction ["<t color=""#4DB0E2"">"+"Move Box",Gree_fnc_MoveBox]; */
