@@ -1,11 +1,11 @@
 /*
 	File: welcomecredits.sqf
-	
+
 	Creates an intro on the bottom-right hand corner of the screen and add camera effect to spawn.
 */
 
 private [ "_camera", "_welcomeMessage", "_camDistance" ];
-_welcomeMessage = format["Bienvenue sur AltisLifeFr.com %1",format["%1", name player]];
+_welcomeMessage = format["Bienvenue sur Lentini life %1",format["%1", name player]];
 _camDistance = 40;
 waitUntil { alive player };
 //waituntil {!isnull (finddisplay 46)};
@@ -14,20 +14,19 @@ camUseNVG false;
 playsound "introSong";
 _camera = "camera" camCreate [(position player select 0)-2, position player select 1,(position player select 2)+_camDistance];
 _camera cameraEffect ["internal","back"];
- 
+
 _camera camSetFOV 2.000;
 _camera camCommit 0;
 waitUntil {camCommitted _camera};
-["Bienvenue sur mon serveur test","CENTER_UP",2] call arjay_dynamicText;
- 
+
 _camera camSetTarget vehicle player;
 _camera camSetRelPos [0,0,2];
 _camera camCommit 8;
- 
+
 cutText [_welcomeMessage, "PLAIN DOWN"];
- 
+
 waitUntil {camCommitted _camera};
- 
+
 _camera cameraEffect ["terminate","back"];
 camDestroy _camera;
 sleep 1;
@@ -37,7 +36,7 @@ _onScreenTime = 5;
 
 sleep 3; //Wait in seconds before the credits start after player is in-game
 //player say "introSong";
- 
+
 _role1 = "Bienvenue sur mon serveur test";
 _role1names = ["Server only FR"];
 _role2 = "Site/Forum";
