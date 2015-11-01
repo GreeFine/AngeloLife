@@ -230,7 +230,7 @@ switch (_vehicle) do
 		_path = "skins\car\";
 		_ret = 
 		[
-			[_path + "Zamak Back Pompiers.paa","Zamak Back Pompiers.paa""med"]
+			[_path + "Zamak Pompiers.paa","Zamak Back Pompiers.paa""med"]
 		];
 	};
 
