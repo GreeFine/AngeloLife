@@ -1,7 +1,7 @@
 /*
 	File: fn_clothingMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
@@ -11,11 +11,11 @@ createDialog "Life_Clothing";
 disableSerialization;
 
 //Cop / Civ Pre Check
-if((_this select 3) in ["bruce","dive","reb","soldner"] && playerSide != civilian) exitWith {hintSilent "You need to be a civilian to use this store!"; closeDialog 0;};
-if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hintSilent "You don't have rebel training yet!"; closeDialog 0;};
-if((_this select 3) in ["cop"] && playerSide != west) exitWith {hintSilent "You need to be a cop to use this store!"; closeDialog 0;};
-if((_this select 3) in ["medic"] && !license_med_air && playerSide != independent) exitWith {hintSilent "Du benötigst eine MedicLizenz und musst Sanitäter sein!"; closeDialog 0;};
-if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hintSilent "You need a Diving license to use this shop!"; closeDialog 0;};
+if((_this select 3) in ["bruce","dive","reb","soldner"] && playerSide != civilian) exitWith {hintSilent "Tu dois être un civil pour utiliser ce magasin !"; closeDialog 0;};
+if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hintSilent "Tu n'as pas l'entrainement rebelle !"; closeDialog 0;};
+if((_this select 3) in ["cop"] && playerSide != west) exitWith {hintSilent "Ce magasin est réservé au Gendarme"; closeDialog 0;};
+if((_this select 3) in ["medic"] && !license_med_air && playerSide != independent) exitWith {hintSilent "Ce magasin est réservé au Medecin"; closeDialog 0;};
+if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hintSilent "Tu n'as pas l'entrainement de plongé"; closeDialog 0;};
 
 life_clothing_store = _this select 3;
 
@@ -43,11 +43,11 @@ _filter = (findDisplay 3100) displayCtrl 3105;
 lbClear _filter;
 lbClear _list;
 
-_filter lbAdd "Kleidung";
-_filter lbAdd "Hüte";
-_filter lbAdd "Brillen";
-_filter lbAdd "Westen";
-_filter lbAdd "Rucksäcke";
+_filter lbAdd "Uniforme";
+_filter lbAdd "Chapeau";
+_filter lbAdd "Lunette";
+_filter lbAdd "Vest";
+_filter lbAdd "Sac à dos";
 
 _filter lbSetCurSel 0;
 
@@ -89,12 +89,12 @@ if(isNil "life_clothesPurchased") exitWith
 			};
 		};
 	};
-	
+
 	if(count life_oldUniformItems > 0) then
 	{
 		{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldUniformItems;
 	};
-	
+
 	if(vest player != "") then
 	{
 		if(life_oldVest == "") then
@@ -128,7 +128,7 @@ if((life_clothing_purchase select 2) == -1) then
 {
 	if(life_oldGlasses != goggles player) then
 	{
-		if(life_oldGlasses == "") then 
+		if(life_oldGlasses == "") then
 		{
 			removeGoggles player;
 		}
