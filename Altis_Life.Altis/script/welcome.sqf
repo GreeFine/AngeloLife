@@ -8,9 +8,6 @@
 waitUntil{ !isNull(findDisplay 38500)};
 waitUntil{ isNull(findDisplay 38500)};
 
-//Sound
-playSound "welcome";
-
 _onScreenTime = 2;
 
 _role1 = "Welcome too";

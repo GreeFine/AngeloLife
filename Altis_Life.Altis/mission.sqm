@@ -1239,7 +1239,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Boutique"",life_fnc_virt_menu,""market""]; this setVariable[""realname"",""Markt""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Boutique"",life_fnc_virt_menu,""market""]; this setVariable[""realname"",""Marché""];";
 				};
 				class Item1
 				{
@@ -1778,7 +1778,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Magasin de vetements"",life_fnc_clothingMenu,""bruce""]; this setVariable[""realname"",""Kleidung""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Magasin de vetements"",life_fnc_clothingMenu,""bruce""]; this setVariable[""realname"",""Magasin de vetements""];";
 				};
 				class Item40
 				{
@@ -1802,7 +1802,7 @@ class Mission
 					vehicle="C_Nikos_aged";
 					skill=0.60000002;
 					text="carshop1";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Concessionnaires"",life_fnc_vehicleShopMenu,[""civ_car_1"",civilian,[""civ_car_1""],""civ"",""Bruce's New & Used Auto's""]]; this setVariable[""realname"",""Auto Verkäufer""];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Concessionnaires"",life_fnc_vehicleShopMenu,[""civ_car_1"",civilian,[""civ_car_1""],""civ"",""Bruce's New & Used Auto's""]]; this setVariable[""realname"",""Vendeur Automobile""];";
 				};
 				class Item42
 				{
@@ -1954,7 +1954,7 @@ class Mission
 					vehicle="C_man_1";
 					skill=0.60000002;
 					text="license_shop_2";
-					init="this allowDamage false;  this enableSimulation false; this addAction[""Lizenzen"",life_fnc_licenses,[""driver"",""boat"",""pilot"",""truck"",""home"",""gun""],0,true,true,"""",' playerSide == civilian ']; this setVariable[""realname"",""Lizenzamt""];";
+					init="this allowDamage false;  this enableSimulation false; this addAction[""Lizenzen"",life_fnc_licenses,[""driver"",""boat"",""pilot"",""truck"",""home"",""gun""],0,true,true,"""",' playerSide == civilian ']; this setVariable[""realname"",""Licenses""];";
 				};
 				class Item55
 				{
@@ -1979,7 +1979,7 @@ class Mission
 					vehicle="C_man_1";
 					skill=0.60000002;
 					text="license_shop_3";
-					init="this allowDamage false;  this enableSimulation false; this addAction[""Lizenzen"",life_fnc_licenses,[""driver"",""boat"",""pilot"",""truck"",""home""],0,true,true,"""",' playerSide == civilian ']; this setVariable[""realname"",""Lizenzamt""];";
+					init="this allowDamage false;  this enableSimulation false; this addAction[""Lizenzen"",life_fnc_licenses,[""driver"",""boat"",""pilot"",""truck"",""home""],0,true,true,"""",' playerSide == civilian ']; this setVariable[""realname"",""Licenses""];";
 				};
 				class Item57
 				{
@@ -3927,7 +3927,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="carshop1_3_1_1";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Brico Depot"",life_fnc_weaponShopMenu,""genstore""]; this setVariable[""realname"",""Elektro Laden""];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Brico Depot"",life_fnc_weaponShopMenu,""genstore""]; this setVariable[""realname"",""Brico Depot""];";
 				};
 			};
 		};
@@ -4150,7 +4150,7 @@ class Mission
 					vehicle="i_soldier_unarmed_f";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""Hornbach"",life_fnc_weaponShopMenu,""genstore""]; this setVariable[""realname"",""Elektro Laden""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""Hornbach"",life_fnc_weaponShopMenu,""genstore""]; this setVariable[""realname"",""Magasin Géneral""];";
 				};
 				class Item1
 				{
