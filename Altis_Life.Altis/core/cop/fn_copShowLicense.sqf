@@ -40,9 +40,18 @@ switch ( _coplevel ) do
 	case 15: { _rang = "Caporal chef"; };
 	case 16: { _rang = "Sergent"; };
 	case 17: { _rang = "Sergent chef"; };
+	case 18: { _rang = "Adjudant"; };
+	case 19: { _rang = "Adjudant chef"; };
+	case 20: { _rang = "Major"; };
+	case 21: { _rang = "Sous-Lieutenant"; };
+	case 22: { _rang = "Lieutenant"; };
+	case 23: { _rang = "Capitaine"; };
+	case 24: { _rang = "commandant"; };
+	case 25: { _rang = "Lieutenant-Colonel"; };
+	case 26: { _rang = "Colonel"; };
 	default {_rank =  "Erreur";};
 };
 
-_message = format["<img size='10' color='#FFFFFF' image='textures\insigne.jpg'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.8'>%2</t><br/><t size='1'>Policier d'Altis</t>", name player, _rang];
+_message = format["<img size='10' color='#FFFFFF' image='textures\insigne.jpg'/><br/><br/><t size='2.5'>%1</t><br/><t size='1.8'>%2</t><br/><t size='1'>Gendarme d'Altis</t>", name player, _rang];
 
 [[player, _message],"life_fnc_copLicenseShown",_target,false] spawn life_fnc_MP;

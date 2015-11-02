@@ -138,12 +138,12 @@ switch (_shop) do
 			_return set[count _return,
 			["C_Hatchback_01_sport_F",35000]];
 		};
-		if (__GETC__(life_coplevel) > 4) then
+		if (__GETC__(life_coplevel) > 6) then
 		{
 			_return set[count _return,
 			["B_MRAP_01_F",50000]];
 		};
-		if (__GETC__(life_coplevel) > 6) then
+		if (__GETC__(life_coplevel) > 11) then
 		{
 			_return set[count _return,
 			["I_MRAP_03_F",250000]];
@@ -171,7 +171,7 @@ switch (_shop) do
 			_return set[count _return,
 			["I_Heli_light_03_unarmed_F",50000]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		if(__GETC__(life_coplevel) > 6) then
 		{
 			_return set[count _return,
 			["I_Heli_Transport_02_F",65000]];

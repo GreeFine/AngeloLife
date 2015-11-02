@@ -69,19 +69,9 @@ while {true} do
         waitUntil {uniform player == "U_B_SpecopsUniform_sgg"};
         player setObjectTextureGlobal [0,"skins\human\cop\Uniforme Polaire Gendarme.paa"];
         waitUntil {uniform player != "U_B_SpecopsUniform_sgg"};
-	};
-};
-// CopLevel 5
-[] spawn
-{
-while {true} do
-    {
-        waitUntil {uniform player == "U_B_CombatUniform_mcam_worn"};
-        player setObjectTextureGlobal [0,"skins\human\cop\UniformeRAID fini2.paa"];
-        waitUntil {uniform player != "U_B_CombatUniform_mcam_worn"};
     };
 };
-// CopLevel 6
+// CopLevel 11
 [] spawn
 {
 while {true} do

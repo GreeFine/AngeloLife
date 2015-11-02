@@ -137,21 +137,23 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Vous n'ete pas policier!"};
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
 			case (__GETC__(life_coplevel) < 2): {"Vous n'ete pas gendarme!"};
 			default
 			{
 				["Armurerie Gendarme",
 					[
 						["arifle_sdar_F","Rifle taser",10000],
-						["hgun_Rook40_F","Tazer",500],
 						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
+						["HandGrenade_Stone","Grenade Aveuglante",350],
 						["16Rnd_9x21_Mag","chargeur tazer",100],
 						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
 						["SMG_02_ACO_F","Sting",15000],
 						["30Rnd_9x21_Mag","9MM",200],
 						["arifle_MXC_Black_F","Mxc",20000],
-						["30Rnd_65x39_caseless_mag","6,5mm",300]
+						["30Rnd_65x39_caseless_mag","6,5mm",300],
+						["hgun_Pistol_heavy_01_F",nil,800],
+						["11Rnd_45ACP_Mag",nil,100]
 					]
 				];
 			};
@@ -162,7 +164,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Vous n'ete pas policier!"};
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
 			case (__GETC__(life_coplevel) < 3): {"Vous n'ete pas adjudant!"};
 			default
 			{
@@ -170,13 +172,17 @@ switch(_shop) do
 					[
 						["arifle_MXC_Black_F",nil,20000],
 						["arifle_MX_Black_F",nil,25000],
+						["SMG_02_ACO_F","Sting",15000],
 						["arifle_sdar_F","Rifle Taser",10000],
-						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
 						["hgun_Rook40_snds_F","Taser avec silencieux",600],
+						["hgun_Pistol_heavy_01_F",nil,800],
+						["HandGrenade_Stone","Grenade Aveuglante",350],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
 						["16Rnd_9x21_Mag","chargeur tazer",100],
 						["SMG_02_F",nil,1500],
 						["30Rnd_65x39_caseless_mag","6,5mm ",300],
-						["30Rnd_9x21_Mag","9mm",200]
+						["30Rnd_9x21_Mag","9mm",200],
+						["11Rnd_45ACP_Mag",nil,100]
 					]
 				];
 			};
@@ -187,7 +193,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Vous n'ete pas policier"};
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
 			case (__GETC__(life_coplevel) < 4): {"Vous n'ete pas adjudant-chef"};
 			default
 			{
@@ -201,10 +207,12 @@ switch(_shop) do
 						["arifle_MX_Black_F",nil,25000],
 						["arifle_MXC_Black_F",nil,20000],
 						["arifle_MXM_Black_F",nil,30000],
+						["hgun_Pistol_heavy_01_F",nil,800],
 						["30Rnd_65x39_caseless_mag","6,5mm",300],
 						["30Rnd_9x21_Mag",nil,200],
 						["HandGrenade_Stone","Grenade Aveuglante",10],
-						["SmokeShellOrange","Fumigene",300]
+						["SmokeShellOrange","Fumigene",300],
+						["11Rnd_45ACP_Mag",nil,100]
 					]
 				];
 			};
@@ -215,8 +223,8 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"Vous n'ete pas policier"};
-			case (__GETC__(life_coplevel) < 5): {"Vous n'ete pas major"};
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
+			case (__GETC__(life_coplevel) < 5): {"Vous n'ete pas Major"};
 			default
 			{
 				["Armurerie Major",
@@ -226,25 +234,184 @@ switch(_shop) do
 						["arifle_MXC_Black_F",nil,20000],
 						["arifle_MX_SW_Black_F",nil,40000],
 						["SMG_02_F",nil,15000],
+						["arifle_sdar_F","Rifle taser",10000],
+						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
+						["hgun_Pistol_heavy_01_F",nil,800],
 						["SmokeShellOrange","Fumigene",300],
 						["SmokeShellBlue","Fumigene bleu",300],
 						["HandGrenade_Stone","Grenade Aveuglante",350],
 						["SmokeShellOrange","Fumigene orange",300],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
+						["16Rnd_9x21_Mag","chargeur tazer",100],
 						["30Rnd_65x39_caseless_mag","6,5mm",300],
 						["30Rnd_9x21_Mag",nil,200],
-						["100Rnd_65x39_caseless_mag",nil,350]
+						["100Rnd_65x39_caseless_mag",nil,350],
+						["11Rnd_45ACP_Mag",nil,100]
 					]
 				];
 			};
 		};
 	};
-
+	
+	case "cop_lieut":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
+			case (__GETC__(life_coplevel) < 5): {"Vous n'ete pas Lieutenant"};
+			default
+			{
+				["Armurerie Lieutenant",
+					[
+						["arifle_MXM_Black_F",nil,30000],
+						["arifle_MX_Black_F",nil,25000],
+						["arifle_MXC_Black_F",nil,20000],
+						["arifle_MX_SW_Black_F",nil,40000],
+						["SMG_02_F",nil,15000],
+						["srifle_LRR_F",nil,80000],
+						["arifle_sdar_F","Rifle taser",10000],
+						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
+						["hgun_Pistol_heavy_01_F",nil,800],
+						["SmokeShellOrange","Fumigene",300],
+						["SmokeShellBlue","Fumigene bleu",300],
+						["HandGrenade_Stone","Grenade Aveuglante",350],
+						["SmokeShellOrange","Fumigene orange",300],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
+						["16Rnd_9x21_Mag","chargeur tazer",100],
+						["20Rnd_762x51_Mag",nil,300],
+						["30Rnd_65x39_caseless_mag","6,5mm",300],
+						["30Rnd_9x21_Mag",nil,200],
+						["100Rnd_65x39_caseless_mag",nil,350],
+						["11Rnd_45ACP_Mag",nil,100]
+					]
+				];
+			};
+		};
+	};
+	
+	case "cop_cap":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
+			case (__GETC__(life_coplevel) < 5): {"Vous n'ete pas Capitaine"};
+			default
+			{
+				["Armurerie Capitaine",
+					[
+						["arifle_MXM_Black_F",nil,30000],
+						["arifle_MX_Black_F",nil,25000],
+						["arifle_MXC_Black_F",nil,20000],
+						["arifle_MX_SW_Black_F",nil,40000],
+						["SMG_02_F",nil,15000],
+						["srifle_LRR_F",nil,80000],
+						["srifle_DMR_03_F",nil,35000],
+						["arifle_sdar_F","Rifle taser",10000],
+						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
+						["hgun_Pistol_heavy_01_F",nil,800],
+						["SmokeShellOrange","Fumigene",300],
+						["SmokeShellBlue","Fumigene bleu",300],
+						["HandGrenade_Stone","Grenade Aveuglante",350],
+						["SmokeShellOrange","Fumigene orange",300],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
+						["16Rnd_9x21_Mag","chargeur tazer",100],
+						["20Rnd_762x51_Mag",nil,300],
+						["30Rnd_65x39_caseless_mag","6,5mm",300],
+						["30Rnd_9x21_Mag",nil,200],
+						["100Rnd_65x39_caseless_mag",nil,350],
+						["20Rnd_762x51_Mag",nil,400],
+						["11Rnd_45ACP_Mag",nil,100]
+					]
+				];
+			};
+		};
+	};
+	
+	case "cop_com":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
+			case (__GETC__(life_coplevel) < 5): {"Vous n'ete pas Commandant"};
+			default
+			{
+				["Armurerie Commandant",
+					[
+						["arifle_MXM_Black_F",nil,30000],
+						["arifle_MX_Black_F",nil,25000],
+						["arifle_MXC_Black_F",nil,20000],
+						["arifle_MX_SW_Black_F",nil,40000],
+						["SMG_02_F",nil,15000],
+						["srifle_LRR_F",nil,80000],
+						["srifle_DMR_03_F",nil,35000],
+						["srifle_EBR_F",nil,40000],
+						["arifle_sdar_F","Rifle taser",10000],
+						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
+						["hgun_Pistol_heavy_01_F",nil,800],
+						["SmokeShellOrange","Fumigene",300],
+						["SmokeShellBlue","Fumigene bleu",300],
+						["HandGrenade_Stone","Grenade Aveuglante",350],
+						["SmokeShellOrange","Fumigene orange",300],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
+						["16Rnd_9x21_Mag","chargeur tazer",100],
+						["20Rnd_762x51_Mag",nil,300],
+						["30Rnd_65x39_caseless_mag","6,5mm",300],
+						["30Rnd_9x21_Mag",nil,200],
+						["100Rnd_65x39_caseless_mag",nil,350],
+						["20Rnd_762x51_Mag",nil,400],
+						["11Rnd_45ACP_Mag",nil,100]
+					]
+				];
+			};
+		};
+	};
+	
+	case "cop_col":
+	{
+		switch(true) do
+		{
+			case (playerSide !=west): {"Vous n'ete pas Gendarme"};
+			case (__GETC__(life_coplevel) < 5): {"Vous n'ete pas Colonel"};
+			default
+			{
+				["Armurerie Colonel",
+					[
+						["arifle_MXM_Black_F",nil,30000],
+						["arifle_MX_Black_F",nil,25000],
+						["arifle_MXC_Black_F",nil,20000],
+						["arifle_MX_SW_Black_F",nil,40000],
+						["SMG_02_F",nil,15000],
+						["srifle_LRR_F",nil,80000],
+						["srifle_DMR_03_F",nil,35000],
+						["srifle_EBR_F",nil,40000],
+						["arifle_sdar_F","Rifle taser",10000],
+						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
+						["hgun_Pistol_heavy_01_F",nil,800],
+						["DemoCharge_Remote_Mag",nil,5000],
+						["SmokeShellOrange","Fumigene",300],
+						["SmokeShellBlue","Fumigene bleu",300],
+						["HandGrenade_Stone","Grenade Aveuglante",350],
+						["SmokeShellOrange","Fumigene orange",300],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
+						["16Rnd_9x21_Mag","chargeur tazer",100],
+						["20Rnd_762x51_Mag",nil,300],
+						["30Rnd_65x39_caseless_mag","6,5mm",300],
+						["30Rnd_9x21_Mag",nil,200],
+						["100Rnd_65x39_caseless_mag",nil,350],
+						["20Rnd_762x51_Mag",nil,400],
+						["11Rnd_45ACP_Mag",nil,100]
+					]
+				];
+			};
+		};
+	};
+	
 	case "cop_gsg":
 	{
 		switch(true) do
 		{
-			case (playerSide !=west): {"vous n'ete pas policier"};
-			case (__GETC__(life_coplevel) < 6): {"Vous n'ete pas Officier"};
+			case (playerSide !=west): {"vous n'ete pas Gendarme"};
+			case (__GETC__(life_coplevel) < 12): {"Vous n'ete pas membre du GIGN"};
 			default
 			{
 				["GIGN",
@@ -258,19 +425,24 @@ switch(_shop) do
 						["srifle_EBR_F",nil,40000],
 						["srifle_LRR_F",nil,80000],
 						["srifle_DMR_03_F",nil,35000],
+						["arifle_sdar_F","Rifle taser",10000],
+						["hgun_Rook40_snds_F","Taser avec silencieux",1000],
 						["launch_RPG32_F",nil,50000],
 						["7Rnd_408_Mag",nil,500],
+						["DemoCharge_Remote_Mag",nil,5000],
 						["SmokeShellOrange","Fumigene",300],
 						["SmokeShellBlue","Fumigene lacrymogene",300],
 						["HandGrenade_Stone","Grenade Aveuglante",350],
 						["SmokeShellOrange","Fumigene orange",300],
 						["RPG32_HE_F",nil,500],
+						["20Rnd_556x45_UW_mag","Chargeur rifle",120],
+						["16Rnd_9x21_Mag","chargeur tazer",100],
 						["30Rnd_65x39_caseless_mag","6,5mm",300],
-						["20Rnd_762x51_Mag",nil,300],
 						["30Rnd_9x21_Mag",nil,200],
 						["100Rnd_65x39_caseless_mag",nil,350],
 						["200Rnd_65x39_cased_Box",nil,500],
-						["20Rnd_762x51_Mag",nil,400]
+						["20Rnd_762x51_Mag",nil,400],
+						["11Rnd_45ACP_Mag",nil,100]
 					]
 				];
 			};
