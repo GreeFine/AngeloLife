@@ -30,41 +30,39 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hintSilent "You aren't the own
 		_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
 		_progress progressSetPosition 0.01;
 		_cP = 0.01;
-		
+
 		while{true} do
 		{
 			if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
 				[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
 				player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-			};						
+			};
 			uiSleep 0.29;
-			player say3D "spraycan";
-			//[player,"spraycan"] call life_fnc_globalSound; //Just if you have global sounds!
 
 			_cP = _cP + 0.01;
 			_progress progressSetPosition _cP;
-			_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];			
+			_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 			if(_cP >= 1) exitWith {_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 			if(!alive player) exitWith {_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 			if(player != vehicle player) exitWith {_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 			if(life_interrupted) exitWith {_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 		};
-		
+
 		life_action_inUse = false;
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText["Abgebrochen","PLAIN"]; life_action_inUse = false;_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
-		if(player != vehicle player) exitWith {titleText["Du musst aus dem Fahrzeug aussteigen, um es lackieren zu können!","PLAIN"];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
-	
+		if(player != vehicle player) exitWith {titleText["Du musst aus dem Fahrzeug aussteigen, um es lackieren zu k?nnen!","PLAIN"];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
+
 		life_cash = life_cash - _basePrice;
 		//Send toDB
 		[[_veh,_color_index],"TON_fnc_vehicleRepaint",false,false] spawn life_fnc_MP;
-		
+
 		//Color vehicle locally
 		[_veh,_color_index] call life_fnc_colorVehicle;
-		
+
 		[] call SOCK_fnc_updateRequest; //Sync silently because it's obviously silently..
-	
-		//hintSilent format["Vehicle: %1 || New Color: %2 || Owner: %3",_veh,_color_index,_vehicledata]; //Deactivated, wrong states there :-(		
+
+		//hintSilent format["Vehicle: %1 || New Color: %2 || Owner: %3",_veh,_color_index,_vehicledata]; //Deactivated, wrong states there :-(
 };
 _ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];

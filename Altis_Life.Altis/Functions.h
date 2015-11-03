@@ -144,9 +144,6 @@ class Life_Client_Core
 		class isEmpOperator {};
 		class scanVehicles {};
 		class warnVehicle {};
-		class empVehicle {};
-		class vehicleWarned {};
-		class vehicleEmpd {};
 	};
 
 	class Housing
@@ -356,7 +353,6 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copLoadout {};
 		class breathalyzer {};
-		class copSiren2 {};
 		class ticketPaid {};
 		class copEnter {};
 		class copOpener {};

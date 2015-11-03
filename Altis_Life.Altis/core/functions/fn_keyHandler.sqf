@@ -246,37 +246,6 @@ switch (_code) do
 		};
 	};
 
-	//Ö Key
-	case 39:
-	{
-		if(playerSide in [west] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
-		{
-			[] spawn
-			{
-				life_siren_active = true;
-				uiSleep 7;
-				life_siren_active = false;
-			};
-			_veh = vehicle player;
-			if(isNil {_veh getVariable "siren2"}) then {_veh setVariable["siren2",false,true];};
-			if((_veh getVariable "siren2")) then
-			{
-				titleText ["Warnung Off","PLAIN"];
-				_veh setVariable["siren2",false,true];
-			}
-				else
-			{
-				titleText ["Warnung On","PLAIN"];
-				_veh setVariable["siren2",true,true];
-				if(playerSide == west) then {
-					[[_veh],"life_fnc_copSiren2",nil,true] spawn life_fnc_MP;
-				} else {
-					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
-				};
-			};
-		};
-	};
-
 	//U Key
 	case 22:
 	{

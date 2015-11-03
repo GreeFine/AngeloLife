@@ -35,7 +35,7 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["<t color='#4CD100'>Carte d'identite</t>",life_fnc_HintCi,"",1,false,true,"",' playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
 		//Boule Qui?s
 		life_actions = life_actions + [player addAction["<t color='#ADFF2F'>Boule Qui?s Oui/Non</t>",{if (soundVolume != 1) then {1 fadeSound 1;} else {1 fadeSound 0.1;};},"",-6,false,false,"",'vehicle player != player || soundVolume != 1']];
-		life_actions = life_actions + [player addAction ["<t color=""#4DB0E2"">"+"Move Box",Gree_fnc_MoveBox,"",-6,false,false,"",'vehicle player == player && typeof cursorTarget == "Box_East_WpsSpecial_F"']];
+		life_actions = life_actions + [player addAction ["<t color=""#4DB0E2"">"+"Move Box",Gree_fnc_MoveBox,"",-6,false,false,"",'vehicle player == player && typeof cursorTarget == "Box_NATO_AmmoVeh_F"']];
 	};
 
 	case independent:

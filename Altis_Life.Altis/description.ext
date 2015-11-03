@@ -22,7 +22,7 @@ respawn = BASE;
 respawndelay = 15;
 debriefing = 0;
 briefing = 0;
-loadScreen = skins\LogoChargement.jpg;
+loadScreen = "skins\LogoChargement.jpg";
 
 class Header
 {
@@ -103,12 +103,6 @@ class CfgSounds
 	{
 		name = "empwarn";
 		sound[] = {"\sounds\empwarn.ogg", 1.0, 1};
-		titles[] = {};
-	};
-	class empacsound
-	{
-		name = "empacsound";
-		sound[] = {"sounds\empac.ogg", db-5, 1};
 		titles[] = {};
 	};
   	class MedicSirenLong
