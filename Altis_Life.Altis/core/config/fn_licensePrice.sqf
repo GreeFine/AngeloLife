@@ -13,20 +13,20 @@ switch (_type) do
 {
 	case "driver": {1000}; //Drivers License cost
 	case "boat": {1000}; //Boating license cost
-	case "pilot": {50000}; //Pilot/air license cost
+	case "pilot": {300000}; //Pilot/air license cost
 	case "gun": {80000}; //Firearm/gun license cost
 	case "dive": {5000}; //Diving license cost
 	case "oil": {20000}; //Oil processing license cost
 	case "cair": {15000}; //Cop Pilot License cost
 	case "swat": {35000}; //Swat License cost
 	case "cg": {10000}; //Coast guard license cost
-	case "heroin": {45000}; //Heroin processing license cost
-	case "marijuana": {20000}; //Marijuana processing license cost
-	case "medmarijuana": {75000}; //Medical Marijuana processing license cost
+	case "heroin": {120000}; //Heroin processing license cost
+	case "marijuana": {80000}; //Marijuana processing license cost
+	case "medmarijuana": {255000}; //Medical Marijuana processing license cost
 	case "gang": {500000}; //Gang license cost
 	case "rebel": {500000}; //Rebel license cost
-	case "truck": {25000}; //Truck license cost
-	case "diamond": {50000}; //Diamanten Lizenz
+	case "truck": {35000}; //Truck license cost
+	case "diamond": {150000}; //Diamanten Lizenz
 	case "salt": {20000}; //Salz Lizenz
 	case "cocaine": {80000}; //Kokain Lizenz
 	case "sand": {14500}; //Sand Lizenz
