@@ -47,7 +47,7 @@ while {true} do
 while {true} do
     {
         waitUntil {backpack player == "B_AssaultPack_cbr"};
-        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac a dos gendarmerie.paa"];
+        (unitBackpack player) setObjectTextureGlobal [0,"skins\human\cop\sac gendarmerie.paa"];
         waitUntil {backpack player != "B_AssaultPack_cbr"};
     };
 };
